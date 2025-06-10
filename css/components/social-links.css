@@ -1,0 +1,39 @@
+/* Social Links Component */
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 50%;
+  color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.social-links__link:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+.social-links__link svg {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .social-links__link {
+    border: 2px solid var(--color-border);
+  }
+  
+  .social-links__link:hover {
+    border-color: var(--color-primary);
+  }
+} 

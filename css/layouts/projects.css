@@ -1,0 +1,52 @@
+/* Projects Section Layout */
+.projects {
+  padding: var(--spacing-xxl) 0;
+}
+
+.projects__container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.projects__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.projects__title {
+  font-size: var(--font-size-xxl);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.projects__description {
+  color: var(--color-text-secondary);
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-xl);
+}
+
+.projects__filter {
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .projects__title {
+    text-shadow: 2px 2px 0 var(--color-text-primary);
+  }
+} 
