@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@vitejs/plugin-basic-ssl": "^2.0.0",
+    "eslint": "^9.28.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "isotope-layout": "^3.0.6",
+    "just-validate": "^4.3.0",
+    "lozad": "^1.16.0",
+    "sharp": "^0.34.2"
+  }
+}
