@@ -1,0 +1,124 @@
+/* Navigation Component */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+.nav__logo {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav__logo:hover {
+  color: var(--color-primary-hover);
+}
+
+.nav__list {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.nav__link {
+  position: relative;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width var(--transition-fast);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+.nav__toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-sm);
+}
+
+.nav__toggle-icon,
+.nav__toggle-icon::before,
+.nav__toggle-icon::after {
+  content: '';
+  display: block;
+  width: 2.4rem;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: all var(--transition-fast);
+}
+
+.nav__toggle-icon::before {
+  transform: translateY(-8px);
+}
+
+.nav__toggle-icon::after {
+  transform: translateY(6px);
+}
+
+.nav__toggle.active .nav__toggle-icon {
+  background-color: transparent;
+}
+
+.nav__toggle.active .nav__toggle-icon::before {
+  transform: rotate(45deg);
+}
+
+.nav__toggle.active .nav__toggle-icon::after {
+  transform: rotate(-45deg);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .nav__list {
+    position: fixed;
+    top: 7rem;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 7rem);
+    background-color: var(--color-bg-primary);
+    flex-direction: column;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+    transition: left var(--transition-normal);
+  }
+
+  .nav__list.active {
+    left: 0;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .nav__link::after {
+    height: 3px;
+  }
+  
+  .nav__toggle-icon,
+  .nav__toggle-icon::before,
+  .nav__toggle-icon::after {
+    height: 3px;
+  }
+} 

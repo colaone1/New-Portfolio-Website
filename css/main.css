@@ -1,0 +1,20 @@
+/* Base */
+@import './base/reset.css';
+
+/* Utils */
+@import './utils/variables.css';
+@import './utils/utilities.css';
+
+/* Components */
+@import './components/button.css';
+@import './components/navigation.css';
+@import './components/project-card.css';
+@import './components/filter.css';
+
+/* Layouts */
+@import './layouts/header.css';
+@import './layouts/hero.css';
+@import './layouts/about.css';
+@import './layouts/projects.css';
+@import './layouts/contact.css';
+@import './layouts/footer.css'; 

@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:ui": "vitest --ui",
+    "test:e2e": "playwright test",
+    "test:a11y": "playwright test --project=a11y",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html --chrome-flags=\"--headless\"",
+    "prepare": "husky",
+    "lint": "eslint . --ext .js"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
