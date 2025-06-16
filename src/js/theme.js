@@ -1,48 +1,45 @@
 /**
  * Theme management module for handling theme switching, persistence, and system theme detection
- * Based on the original implementation from Sam's Portfolio Website
  */
 
 export class ThemeManager {
   constructor() {
-    // Preserve existing theme state
+    this.themeToggle = document.querySelector('[data-theme-toggle]');
     this.theme = localStorage.getItem('theme') || this.getSystemTheme();
     this.supportsReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     this.supportsHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-    
-    // Initialize theme system
+
     this.init();
   }
 
   init() {
     // Set initial theme
     this.setTheme(this.theme);
-    
+
     // Initialize theme toggle
-    const themeToggle = document.querySelector('[data-theme-toggle]');
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => this.toggleTheme());
+    if (this.themeToggle) {
+      this.themeToggle.addEventListener('click', () => this.toggleTheme());
     }
-    
+
     // Listen for system theme changes
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
       if (!localStorage.getItem('theme')) {
         this.setTheme(e.matches ? 'dark' : 'light');
       }
     });
-    
+
     // Listen for reduced motion changes
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       this.supportsReducedMotion = e.matches;
       document.documentElement.classList.toggle('reduced-motion', e.matches);
     });
-    
+
     // Listen for high contrast changes
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       this.supportsHighContrast = e.matches;
       document.documentElement.classList.toggle('high-contrast', e.matches);
     });
-    
+
     // Set initial accessibility classes
     document.documentElement.classList.toggle('reduced-motion', this.supportsReducedMotion);
     document.documentElement.classList.toggle('high-contrast', this.supportsHighContrast);
@@ -56,26 +53,25 @@ export class ThemeManager {
     this.theme = theme;
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    
-    // Update theme toggle state
-    const themeToggle = document.querySelector('[data-theme-toggle]');
-    if (themeToggle) {
-      themeToggle.setAttribute('aria-pressed', theme === 'dark');
-      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
+
+    // Update theme toggle button state
+    if (this.themeToggle) {
+      this.themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
+      this.themeToggle.setAttribute('aria-pressed', theme === 'dark');
     }
   }
 
   toggleTheme() {
-    this.setTheme(this.theme === 'light' ? 'dark' : 'light');
+    this.setTheme(this.theme === 'dark' ? 'light' : 'dark');
   }
 
   // Utility method to check if animations should be disabled
   shouldDisableAnimations() {
     return this.supportsReducedMotion;
   }
-}
 
-// Initialize theme manager when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  window.themeManager = new ThemeManager();
-}); 
+  // Utility method to check if high contrast mode is active
+  isHighContrast() {
+    return this.supportsHighContrast;
+  }
+} 
