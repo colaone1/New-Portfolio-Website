@@ -1,87 +1,77 @@
-// Theme Management
-class ThemeManager {
+/**
+ * Theme management module for handling theme switching, persistence, and system theme detection
+ * Based on the original implementation from Sam's Portfolio Website
+ */
+
+export class ThemeManager {
   constructor() {
-    this.theme = localStorage.getItem('theme') || 'light';
-    this.systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
-    this.highContrast = window.matchMedia('(prefers-contrast: high)');
+    // Preserve existing theme state
+    this.theme = localStorage.getItem('theme') || this.getSystemTheme();
+    this.supportsReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.supportsHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
     
+    // Initialize theme system
     this.init();
   }
-  
+
   init() {
     // Set initial theme
     this.setTheme(this.theme);
     
+    // Initialize theme toggle
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => this.toggleTheme());
+    }
+    
     // Listen for system theme changes
-    this.systemTheme.addEventListener('change', (e) => {
-      if (this.theme === 'system') {
-        this.setTheme('system');
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        this.setTheme(e.matches ? 'dark' : 'light');
       }
+    });
+    
+    // Listen for reduced motion changes
+    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
+      this.supportsReducedMotion = e.matches;
+      document.documentElement.classList.toggle('reduced-motion', e.matches);
     });
     
     // Listen for high contrast changes
-    this.highContrast.addEventListener('change', (e) => {
-      if (e.matches) {
-        document.documentElement.setAttribute('data-theme', 'high-contrast');
-      } else if (this.theme === 'high-contrast') {
-        this.setTheme('light');
-      }
+    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
+      this.supportsHighContrast = e.matches;
+      document.documentElement.classList.toggle('high-contrast', e.matches);
     });
     
-    // Initialize theme switcher
-    this.initThemeSwitcher();
+    // Set initial accessibility classes
+    document.documentElement.classList.toggle('reduced-motion', this.supportsReducedMotion);
+    document.documentElement.classList.toggle('high-contrast', this.supportsHighContrast);
   }
-  
+
+  getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
   setTheme(theme) {
     this.theme = theme;
+    document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
     
-    if (theme === 'system') {
-      const systemTheme = this.systemTheme.matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', systemTheme);
-    } else {
-      document.documentElement.setAttribute('data-theme', theme);
+    // Update theme toggle state
+    const themeToggle = document.querySelector('[data-theme-toggle]');
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-pressed', theme === 'dark');
+      themeToggle.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`);
     }
-    
-    // Update active state in theme switcher
-    this.updateThemeSwitcher();
   }
-  
-  initThemeSwitcher() {
-    const themeSwitcher = document.querySelector('.theme-switcher');
-    if (!themeSwitcher) return;
-    
-    // Toggle dropdown
-    themeSwitcher.addEventListener('click', (e) => {
-      e.stopPropagation();
-      themeSwitcher.classList.toggle('active');
-    });
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', () => {
-      themeSwitcher.classList.remove('active');
-    });
-    
-    // Handle theme options
-    const options = themeSwitcher.querySelectorAll('.theme-switcher__option');
-    options.forEach(option => {
-      option.addEventListener('click', () => {
-        const theme = option.dataset.theme;
-        this.setTheme(theme);
-      });
-    });
-    
-    this.updateThemeSwitcher();
+
+  toggleTheme() {
+    this.setTheme(this.theme === 'light' ? 'dark' : 'light');
   }
-  
-  updateThemeSwitcher() {
-    const themeSwitcher = document.querySelector('.theme-switcher');
-    if (!themeSwitcher) return;
-    
-    const options = themeSwitcher.querySelectorAll('.theme-switcher__option');
-    options.forEach(option => {
-      option.classList.toggle('active', option.dataset.theme === this.theme);
-    });
+
+  // Utility method to check if animations should be disabled
+  shouldDisableAnimations() {
+    return this.supportsReducedMotion;
   }
 }
 

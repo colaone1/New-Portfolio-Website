@@ -1,5 +1,6 @@
 /* Base */
 @import './base/reset.css';
+@import './base/typography.css';
 
 /* Utils */
 @import './utils/variables.css';
@@ -17,4 +18,16 @@
 @import './layouts/about.css';
 @import './layouts/projects.css';
 @import './layouts/contact.css';
-@import './layouts/footer.css'; 
+@import './layouts/footer.css';
+
+/* Themes */
+@import './themes/theme.css';
+
+/* Print */
+@import './print.css';
+
+/* High Contrast */
+@import './high-contrast.css';
+
+/* Reduced Motion */
+@import './reduced-motion.css'; 
