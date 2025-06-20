@@ -32,8 +32,8 @@
   .social-links__link {
     border: 2px solid var(--color-border);
   }
-  
+
   .social-links__link:hover {
     border-color: var(--color-primary);
   }
-} 
+}

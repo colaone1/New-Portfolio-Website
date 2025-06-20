@@ -3,6 +3,7 @@
 ## 🏗️ **Project Structure**
 
 ### **Core Files**
+
 - `index.html` - Main HTML structure with SEO optimization and accessibility features
 - `css/main.css` - Primary stylesheet with component imports
 - `js/main.js` - Core JavaScript functionality and initialization
@@ -10,6 +11,7 @@
 - `sw.js` - Service worker for offline support
 
 ### **CSS Architecture**
+
 ```
 css/
 ├── base/           # Reset and typography
@@ -24,6 +26,7 @@ css/
 ```
 
 ### **JavaScript Modules**
+
 ```
 js/
 ├── main.js         # Core functionality and initialization
@@ -32,6 +35,7 @@ js/
 ```
 
 ### **Assets**
+
 ```
 assets/
 ├── fonts/          # Web fonts
@@ -42,6 +46,7 @@ assets/
 ## 🎯 **Key Components**
 
 ### **Accessibility Features**
+
 - WCAG 2.1 Level AA compliance
 - Keyboard navigation support
 - Screen reader compatibility
@@ -50,6 +55,7 @@ assets/
 - Skip links and ARIA labels
 
 ### **Performance Optimizations**
+
 - Lazy loading with Intersection Observer
 - Image optimization with WebP fallbacks
 - Service worker for offline support
@@ -57,6 +63,7 @@ assets/
 - Resource hints and preloading
 
 ### **Theme System**
+
 - Dark/light mode switching
 - System theme detection
 - Theme persistence
@@ -66,6 +73,7 @@ assets/
 ## 🚀 **Development Workflow**
 
 ### **Scripts**
+
 - `npm run dev` - Development server
 - `npm run build` - Production build
 - `npm run test` - Unit tests
@@ -74,6 +82,7 @@ assets/
 - `npm run lighthouse` - Performance audit
 
 ### **Quality Gates**
+
 - ESLint for code quality
 - Prettier for formatting
 - Husky for pre-commit hooks
@@ -81,6 +90,7 @@ assets/
 - Lighthouse CI for performance
 
 ## 📊 **Performance Targets**
+
 - Lighthouse score: 95+ for all categories
 - First Contentful Paint: < 1.5s
 - Time to Interactive: < 3.5s
@@ -88,18 +98,21 @@ assets/
 - Cumulative Layout Shift: < 0.1
 
 ## 🔧 **AI-Optimized Tags**
+
 - `// AI-OPTIMIZED:` - AI-friendly code sections
 - `// IMPORTANT:` - Critical logic or security checks
 - `// TODO:` - Future improvements
 - `// SLOW:` - Performance bottlenecks
 
 ## 📁 **File Naming Conventions**
+
 - Components: `*.component.css` (e.g., `button.component.css`)
 - Layouts: `*.layout.css` (e.g., `header.layout.css`)
 - Utilities: `*.utils.css` (e.g., `variables.utils.css`)
 - JavaScript: `*.js` (e.g., `navigation.js`)
 
 ## 🎨 **Design System**
+
 - CSS Custom Properties for theming
 - Consistent spacing scale
 - Typography hierarchy
@@ -109,20 +122,23 @@ assets/
 ## 🔍 **Quick Reference**
 
 ### **Main Entry Points**
+
 - HTML: `index.html` (line 1)
 - CSS: `css/main.css` (line 1)
 - JS: `js/main.js` (line 1)
 
 ### **Key Functions**
+
 - Theme switching: `js/theme.js` (line 1)
 - Navigation: `js/navigation.js` (line 1)
 - Service worker: `sw.js` (line 1)
 
 ### **Critical Paths**
+
 - Critical CSS: `css/main.css`
 - Critical JS: `js/main.js`
 - Critical HTML: `index.html` (head section)
 
 ---
 
-**This summary provides AI assistants with quick access to the most important aspects of the codebase for efficient processing and development.** 
+**This summary provides AI assistants with quick access to the most important aspects of the codebase for efficient processing and development.**

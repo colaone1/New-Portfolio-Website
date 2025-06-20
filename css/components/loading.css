@@ -58,7 +58,9 @@
 }
 
 @keyframes spinner-dots-bounce {
-  0%, 80%, 100% {
+  0%,
+  80%,
+  100% {
     transform: scale(0);
   }
   40% {
@@ -85,7 +87,12 @@
 }
 
 .progress__bar--animated {
-  background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-light) 50%, var(--color-primary) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 50%,
+    var(--color-primary) 100%
+  );
   background-size: 200% 100%;
   animation: progress-shimmer 2s linear infinite;
 }
@@ -109,7 +116,12 @@
 
 /* AI-OPTIMIZED: Skeleton loader - content placeholders */
 .skeleton {
-  background: linear-gradient(90deg, var(--color-border) 25%, var(--color-background-hover) 50%, var(--color-border) 75%);
+  background: linear-gradient(
+    90deg,
+    var(--color-border) 25%,
+    var(--color-background-hover) 50%,
+    var(--color-border) 75%
+  );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s ease-in-out infinite;
   border-radius: var(--border-radius-sm);
@@ -195,7 +207,9 @@
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .loading-overlay.is-active {
@@ -297,7 +311,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
   animation: image-shimmer 1.5s infinite;
 }
 
@@ -340,7 +359,7 @@
   .loading-overlay__text {
     font-size: var(--font-size-base);
   }
-  
+
   .skeleton--image {
     height: 150px;
   }
@@ -355,11 +374,11 @@
   .image--loading::before {
     animation: none;
   }
-  
+
   .progress__bar--animated {
     background: var(--color-primary);
   }
-  
+
   .skeleton {
     background: var(--color-border);
   }
@@ -370,7 +389,7 @@
   .loading-overlay {
     background-color: rgba(0, 0, 0, 0.9);
   }
-  
+
   .skeleton {
     background: var(--color-text);
     opacity: 0.2;
@@ -413,4 +432,4 @@
 
 .is-loading * {
   pointer-events: none;
-} 
+}

@@ -42,4 +42,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['lodash', 'date-fns'],
   },
-}); 
+});

@@ -38,8 +38,8 @@
   .filter__button {
     border-width: 2px;
   }
-  
+
   .filter__button--active {
     border-width: 3px;
   }
-} 
+}

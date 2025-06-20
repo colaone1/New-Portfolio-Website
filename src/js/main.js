@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeManager = new ThemeManager();
 
   // Add any global event listeners or initialization logic here
-  document.addEventListener('keydown', (e) => {
+  document.addEventListener('keydown', e => {
     // Handle escape key for closing mobile menu
     if (e.key === 'Escape' && navigation.isMenuOpen) {
       navigation.toggleMobileMenu();
     }
   });
-}); 
+});

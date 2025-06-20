@@ -10,7 +10,7 @@ export class Navigation {
     this.mobileMenu = document.querySelector('[data-mobile-menu]');
     this.navLinks = document.querySelectorAll('[data-nav-link]');
     this.isMenuOpen = false;
-    
+
     // Initialize navigation
     this.init();
   }
@@ -19,20 +19,22 @@ export class Navigation {
     // Initialize mobile menu
     if (this.mobileMenuButton && this.mobileMenu) {
       this.mobileMenuButton.addEventListener('click', () => this.toggleMenu());
-      
+
       // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (this.isMenuOpen && 
-            !e.target.closest('[data-mobile-menu]') && 
-            !e.target.closest('[data-mobile-menu-button]')) {
+      document.addEventListener('click', e => {
+        if (
+          this.isMenuOpen &&
+          !e.target.closest('[data-mobile-menu]') &&
+          !e.target.closest('[data-mobile-menu-button]')
+        ) {
           this.closeMenu();
         }
       });
     }
-    
+
     // Initialize smooth scrolling
     this.navLinks.forEach(link => {
-      link.addEventListener('click', (e) => {
+      link.addEventListener('click', e => {
         const href = link.getAttribute('href');
         if (href.startsWith('#')) {
           e.preventDefault();
@@ -41,7 +43,7 @@ export class Navigation {
         }
       });
     });
-    
+
     // Initialize active link highlighting
     this.updateActiveLink();
     window.addEventListener('scroll', () => this.updateActiveLink());
@@ -51,7 +53,7 @@ export class Navigation {
     this.isMenuOpen = !this.isMenuOpen;
     this.mobileMenuButton.setAttribute('aria-expanded', this.isMenuOpen);
     this.mobileMenu.classList.toggle('active');
-    
+
     // Prevent body scroll when menu is open
     document.body.style.overflow = this.isMenuOpen ? 'hidden' : '';
   }
@@ -68,11 +70,12 @@ export class Navigation {
     if (section) {
       const headerOffset = 80; // Adjust based on your header height
       const elementPosition = section.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-      
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     }
   }
@@ -80,13 +83,16 @@ export class Navigation {
   updateActiveLink() {
     const sections = document.querySelectorAll('section[id]');
     const scrollPosition = window.pageYOffset;
-    
+
     sections.forEach(section => {
       const sectionTop = section.offsetTop - 100;
       const sectionHeight = section.offsetHeight;
       const sectionId = section.getAttribute('id');
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+
+      if (
+        scrollPosition >= sectionTop &&
+        scrollPosition < sectionTop + sectionHeight
+      ) {
         this.navLinks.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('href') === `#${sectionId}`) {
@@ -96,4 +102,4 @@ export class Navigation {
       }
     });
   }
-} 
+}

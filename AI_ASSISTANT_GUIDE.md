@@ -9,14 +9,17 @@ This guide is specifically designed for AI assistants to efficiently work with t
 ## 🚀 **Quick Start Protocol**
 
 ### **1. Initial Assessment**
+
 When starting work on this project, AI assistants should:
 
 1. **Read these files first** (in order):
+
    - `CODEBASE_SUMMARY.md` - Quick project overview
    - `AI_ASSISTANT_GUIDE.md` - This guide
    - `portfolio_rebuild_plan.md` - Current development status
 
 2. **Check current status**:
+
    - Review completed sections (✅ marked)
    - Identify next priority areas
    - Understand performance targets
@@ -27,6 +30,7 @@ When starting work on this project, AI assistants should:
    - `js/main.js` (line 1) - Core functionality
 
 ### **2. File Navigation Strategy**
+
 - **Use semantic search** for component-specific queries
 - **Leverage file structure** for quick navigation
 - **Follow naming conventions** for predictable file locations
@@ -37,6 +41,7 @@ When starting work on this project, AI assistants should:
 ## 📁 **File Organization Patterns**
 
 ### **CSS Architecture**
+
 ```
 css/
 ├── base/           # Foundation styles
@@ -48,6 +53,7 @@ css/
 ```
 
 ### **JavaScript Structure**
+
 ```
 js/
 ├── main.js         # Core initialization
@@ -56,6 +62,7 @@ js/
 ```
 
 ### **Asset Organization**
+
 ```
 assets/
 ├── fonts/          # Web fonts
@@ -68,6 +75,7 @@ assets/
 ## 🔧 **AI-Optimized Code Patterns**
 
 ### **1. CSS Component Pattern**
+
 ```css
 /* AI-OPTIMIZED: Component structure for easy identification */
 .component-name {
@@ -84,6 +92,7 @@ assets/
 ```
 
 ### **2. JavaScript Module Pattern**
+
 ```javascript
 // AI-OPTIMIZED: Module structure with clear exports
 const ComponentName = {
@@ -91,17 +100,18 @@ const ComponentName = {
   init() {
     // Initialization logic
   },
-  
+
   // AI-OPTIMIZED: Helper methods
   helper() {
     // Helper logic
-  }
+  },
 };
 
 export default ComponentName;
 ```
 
 ### **3. HTML Semantic Pattern**
+
 ```html
 <!-- AI-OPTIMIZED: Semantic structure with ARIA -->
 <section class="component-name" aria-labelledby="component-title">
@@ -115,6 +125,7 @@ export default ComponentName;
 ## 🎯 **Development Workflow**
 
 ### **1. Component Development**
+
 1. **Create component file** in appropriate directory
 2. **Add AI-OPTIMIZED comments** for key sections
 3. **Follow naming conventions** consistently
@@ -122,6 +133,7 @@ export default ComponentName;
 5. **Test with accessibility tools**
 
 ### **2. Performance Optimization**
+
 1. **Check Lighthouse scores** before and after changes
 2. **Optimize images** with WebP format
 3. **Minimize CSS/JS** bundle sizes
@@ -129,6 +141,7 @@ export default ComponentName;
 5. **Test on multiple devices** and browsers
 
 ### **3. Accessibility Implementation**
+
 1. **Add ARIA labels** and roles
 2. **Ensure keyboard navigation**
 3. **Test with screen readers**
@@ -140,6 +153,7 @@ export default ComponentName;
 ## 📊 **Performance Monitoring**
 
 ### **Key Metrics to Track**
+
 - **Lighthouse Score**: Target 95+ for all categories
 - **First Contentful Paint**: < 1.5s
 - **Largest Contentful Paint**: < 2.5s
@@ -147,6 +161,7 @@ export default ComponentName;
 - **Time to Interactive**: < 3.5s
 
 ### **Testing Commands**
+
 ```bash
 # Performance testing
 npm run lighthouse
@@ -166,18 +181,21 @@ npm run test
 ## 🔍 **Search and Navigation Tips**
 
 ### **1. Efficient File Discovery**
+
 - **Use semantic search** for functionality queries
 - **Use file search** for specific file names
 - **Check directory structure** for related files
 - **Follow import chains** to understand dependencies
 
 ### **2. Code Analysis**
+
 - **Look for AI-OPTIMIZED tags** for key sections
 - **Check IMPORTANT comments** for critical logic
 - **Review TODO items** for future work
 - **Identify SLOW sections** for optimization
 
 ### **3. Component Relationships**
+
 - **CSS components** → `css/components/`
 - **Layout styles** → `css/layouts/`
 - **JavaScript modules** → `js/`
@@ -188,6 +206,7 @@ npm run test
 ## 🛠️ **Common Tasks and Solutions**
 
 ### **1. Adding New Components**
+
 1. Create component file in `css/components/`
 2. Add to `css/main.css` imports
 3. Create JavaScript module if needed
@@ -195,6 +214,7 @@ npm run test
 5. Test accessibility and performance
 
 ### **2. Theme System Modifications**
+
 1. Update `css/themes/theme.css`
 2. Modify `js/theme.js` if needed
 3. Test theme switching
@@ -202,6 +222,7 @@ npm run test
 5. Check print styles
 
 ### **3. Performance Optimizations**
+
 1. Analyze with Lighthouse
 2. Optimize images and fonts
 3. Minimize bundle sizes
@@ -209,6 +230,7 @@ npm run test
 5. Test on multiple devices
 
 ### **4. Accessibility Improvements**
+
 1. Add ARIA labels and roles
 2. Ensure keyboard navigation
 3. Test with screen readers
@@ -220,6 +242,7 @@ npm run test
 ## 📝 **Code Quality Standards**
 
 ### **1. CSS Standards**
+
 - Use CSS Custom Properties for theming
 - Follow BEM methodology for class names
 - Maintain consistent spacing scale
@@ -227,6 +250,7 @@ npm run test
 - Optimize for performance
 
 ### **2. JavaScript Standards**
+
 - Use ES6+ features
 - Implement proper error handling
 - Add accessibility features
@@ -234,6 +258,7 @@ npm run test
 - Follow consistent naming
 
 ### **3. HTML Standards**
+
 - Use semantic HTML elements
 - Add proper ARIA attributes
 - Ensure keyboard navigation
@@ -245,6 +270,7 @@ npm run test
 ## 🚨 **Important Reminders**
 
 ### **1. Always Test**
+
 - Run accessibility tests before committing
 - Check performance with Lighthouse
 - Test on multiple browsers
@@ -252,6 +278,7 @@ npm run test
 - Test with screen readers
 
 ### **2. Follow Conventions**
+
 - Use consistent naming patterns
 - Add AI-OPTIMIZED comments
 - Follow file organization structure
@@ -259,6 +286,7 @@ npm run test
 - Keep performance targets in mind
 
 ### **3. Document Changes**
+
 - Update relevant documentation
 - Add comments for complex logic
 - Mark TODO items for future work
@@ -267,4 +295,4 @@ npm run test
 
 ---
 
-**This guide ensures AI assistants can work efficiently and effectively with the portfolio website codebase while maintaining high standards for accessibility, performance, and code quality.** 
+**This guide ensures AI assistants can work efficiently and effectively with the portfolio website codebase while maintaining high standards for accessibility, performance, and code quality.**

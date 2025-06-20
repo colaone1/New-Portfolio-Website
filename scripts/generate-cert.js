@@ -18,4 +18,4 @@ try {
 } catch (error) {
   console.error('Error generating SSL certificates:', error);
   process.exit(1);
-} 
+}

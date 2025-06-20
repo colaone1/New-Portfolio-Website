@@ -88,11 +88,11 @@
   .theme-switcher__text {
     display: none;
   }
-  
+
   .theme-switcher {
     padding: var(--spacing-sm);
   }
-  
+
   .theme-switcher__dropdown {
     width: 16rem;
   }
@@ -103,12 +103,12 @@
   .theme-switcher {
     border: 2px solid var(--color-border);
   }
-  
+
   .theme-switcher__dropdown {
     border: 2px solid var(--color-border);
   }
-  
+
   .theme-switcher__option {
     border: 1px solid var(--color-border);
   }
-} 
+}
