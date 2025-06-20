@@ -10,7 +10,7 @@ module.exports = {
         // Performance
         'categories:performance': ['error', { minScore: 0.95 }],
         'first-contentful-paint': ['error', { maxNumericValue: 1500 }],
-        'interactive': ['error', { maxNumericValue: 3500 }],
+        interactive: ['error', { maxNumericValue: 3500 }],
         'speed-index': ['error', { maxNumericValue: 3400 }],
         'total-blocking-time': ['error', { maxNumericValue: 300 }],
         'largest-contentful-paint': ['error', { maxNumericValue: 2500 }],
@@ -33,11 +33,11 @@ module.exports = {
         // SEO
         'categories:seo': ['error', { minScore: 0.95 }],
         'robots-txt': ['error', { minScore: 1 }],
-        'canonical': ['error', { minScore: 1 }],
+        canonical: ['error', { minScore: 1 }],
       },
     },
     upload: {
       target: 'temporary-public-storage',
     },
   },
-}; 
+};

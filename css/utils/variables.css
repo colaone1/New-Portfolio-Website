@@ -5,16 +5,16 @@
   --color-primary-light: #dbeafe;
   --color-secondary: #64748b;
   --color-accent: #f59e0b;
-  
+
   /* Background Colors */
   --color-background: #ffffff;
   --color-background-hover: #f8fafc;
   --color-border: #e2e8f0;
-  
+
   /* Text Colors */
   --color-text: #1e293b;
   --color-text-muted: #64748b;
-  
+
   /* Status Colors */
   --color-success: #10b981;
   --color-success-light: #d1fae5;
@@ -28,7 +28,7 @@
   --color-info: #3b82f6;
   --color-info-light: #dbeafe;
   --color-info-dark: #2563eb;
-  
+
   /* Typography */
   --font-size-xs: 1.2rem;
   --font-size-sm: 1.4rem;
@@ -38,18 +38,18 @@
   --font-size-2xl: 2.4rem;
   --font-size-3xl: 3rem;
   --font-size-4xl: 3.6rem;
-  
+
   /* Font Weights */
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  
+
   /* Line Heights */
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
-  
+
   /* Spacing */
   --spacing-1: 0.4rem;
   --spacing-2: 0.8rem;
@@ -63,25 +63,28 @@
   --spacing-16: 6.4rem;
   --spacing-20: 8rem;
   --spacing-24: 9.6rem;
-  
+
   /* Border Radius */
   --border-radius-sm: 0.4rem;
   --border-radius-md: 0.8rem;
   --border-radius-lg: 1.2rem;
   --border-radius-xl: 1.6rem;
   --border-radius-full: 9999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
   /* Transitions */
   --transition-fast: 150ms ease;
   --transition-normal: 300ms ease;
   --transition-slow: 500ms ease;
-  
+
   /* Z-index */
   --z-negative: -1;
   --z-elevate: 1;
@@ -97,10 +100,10 @@
 }
 
 /* Dark theme variables */
-[data-theme="dark"] {
+[data-theme='dark'] {
   --color-background: #0f172a;
   --color-background-hover: #1e293b;
   --color-border: #334155;
   --color-text: #f1f5f9;
   --color-text-muted: #94a3b8;
-} 
+}

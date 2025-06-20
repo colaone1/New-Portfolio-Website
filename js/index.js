@@ -9,15 +9,15 @@ export { ThemeManager } from './theme.js';
 export const core = {
   main: './main.js',
   navigation: './navigation.js',
-  theme: './theme.js'
+  theme: './theme.js',
 };
 
 // AI-OPTIMIZED: Module descriptions for AI processing
 export const moduleInfo = {
   main: 'Core functionality and initialization',
   navigation: 'Navigation and mobile menu functionality',
-  theme: 'Theme switching and persistence management'
+  theme: 'Theme switching and persistence management',
 };
 
 // TODO: Add more modules as they are created
-// TODO: Implement dynamic module loading for performance 
+// TODO: Implement dynamic module loading for performance

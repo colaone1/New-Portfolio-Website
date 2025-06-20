@@ -45,7 +45,9 @@
   height: 40px;
   background-color: var(--color-bg-tertiary);
   border-radius: 50%;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .footer__social-link:hover,
@@ -107,7 +109,7 @@
 
 .footer__contact-text:hover,
 .footer__contact-text:focus {
-    color: var(--color-primary);
+  color: var(--color-primary);
 }
 
 .footer__bottom {
@@ -132,4 +134,4 @@
   .footer__contact {
     margin-bottom: var(--spacing-lg);
   }
-} 
+}

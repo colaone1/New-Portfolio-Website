@@ -17,7 +17,7 @@ class PortfolioValidator {
   // IMPORTANT: Main validation runner
   async validateAll() {
     console.log('🔍 Starting comprehensive validation...\n');
-    
+
     try {
       await this.validateHTML();
       await this.validateCSS();
@@ -25,7 +25,7 @@ class PortfolioValidator {
       await this.validateDependencies();
       await this.validateAccessibility();
       await this.validatePerformance();
-      
+
       this.printReport();
     } catch (error) {
       console.error('❌ Validation failed:', error.message);
@@ -36,7 +36,7 @@ class PortfolioValidator {
   // AI-OPTIMIZED: HTML validation
   async validateHTML() {
     console.log('📄 Validating HTML...');
-    
+
     try {
       // Check if index.html exists
       if (!existsSync('index.html')) {
@@ -45,14 +45,10 @@ class PortfolioValidator {
       }
 
       const html = readFileSync('index.html', 'utf8');
-      
+
       // Check for required meta tags
-      const requiredMetaTags = [
-        'viewport',
-        'description',
-        'charset'
-      ];
-      
+      const requiredMetaTags = ['viewport', 'description', 'charset'];
+
       requiredMetaTags.forEach(tag => {
         if (!html.includes(`meta name="${tag}"`) && !html.includes(`charset`)) {
           this.warnings.push(`Missing meta tag: ${tag}`);
@@ -60,12 +56,8 @@ class PortfolioValidator {
       });
 
       // Check for required sections
-      const requiredSections = [
-        'header',
-        'main',
-        'footer'
-      ];
-      
+      const requiredSections = ['header', 'main', 'footer'];
+
       requiredSections.forEach(section => {
         if (!html.includes(`<${section}`)) {
           this.errors.push(`Missing required section: ${section}`);
@@ -73,12 +65,8 @@ class PortfolioValidator {
       });
 
       // Check for accessibility attributes
-      const accessibilityChecks = [
-        'role=',
-        'aria-',
-        'alt='
-      ];
-      
+      const accessibilityChecks = ['role=', 'aria-', 'alt='];
+
       accessibilityChecks.forEach(check => {
         if (!html.includes(check)) {
           this.warnings.push(`Missing accessibility attribute: ${check}`);
@@ -94,7 +82,7 @@ class PortfolioValidator {
   // AI-OPTIMIZED: CSS validation
   async validateCSS() {
     console.log('🎨 Validating CSS...');
-    
+
     try {
       // Check if main.css exists
       if (!existsSync('css/main.css')) {
@@ -103,7 +91,7 @@ class PortfolioValidator {
       }
 
       const mainCSS = readFileSync('css/main.css', 'utf8');
-      
+
       // Check for CSS variable definitions
       if (!existsSync('css/utils/variables.css')) {
         this.errors.push('CSS variables file not found');
@@ -111,7 +99,7 @@ class PortfolioValidator {
       }
 
       const variablesCSS = readFileSync('css/utils/variables.css', 'utf8');
-      
+
       // Check for required CSS variables
       const requiredVariables = [
         '--color-primary',
@@ -119,9 +107,9 @@ class PortfolioValidator {
         '--color-text',
         '--spacing-',
         '--font-size-',
-        '--border-radius-'
+        '--border-radius-',
       ];
-      
+
       requiredVariables.forEach(variable => {
         if (!variablesCSS.includes(variable)) {
           this.warnings.push(`Missing CSS variable: ${variable}`);
@@ -135,9 +123,9 @@ class PortfolioValidator {
         'project-card.css',
         'modal.css',
         'alert.css',
-        'loading.css'
+        'loading.css',
       ];
-      
+
       componentImports.forEach(component => {
         if (!mainCSS.includes(component)) {
           this.warnings.push(`Missing component import: ${component}`);
@@ -153,7 +141,7 @@ class PortfolioValidator {
   // AI-OPTIMIZED: JavaScript validation
   async validateJavaScript() {
     console.log('⚡ Validating JavaScript...');
-    
+
     try {
       // Check if main.js exists
       if (!existsSync('js/main.js')) {
@@ -162,16 +150,16 @@ class PortfolioValidator {
       }
 
       const mainJS = readFileSync('js/main.js', 'utf8');
-      
+
       // Check for required imports
       const requiredImports = [
         'ThemeManager',
         'Navigation',
         'Modal',
         'Alert',
-        'Loading'
+        'Loading',
       ];
-      
+
       requiredImports.forEach(importName => {
         if (!mainJS.includes(importName)) {
           this.warnings.push(`Missing JavaScript import: ${importName}`);
@@ -184,9 +172,9 @@ class PortfolioValidator {
         'new Navigation()',
         'new Modal()',
         'new Alert()',
-        'new Loading()'
+        'new Loading()',
       ];
-      
+
       requiredInitializations.forEach(init => {
         if (!mainJS.includes(init)) {
           this.warnings.push(`Missing component initialization: ${init}`);
@@ -194,11 +182,8 @@ class PortfolioValidator {
       });
 
       // Check for event listeners
-      const requiredEventListeners = [
-        'DOMContentLoaded',
-        'addEventListener'
-      ];
-      
+      const requiredEventListeners = ['DOMContentLoaded', 'addEventListener'];
+
       requiredEventListeners.forEach(listener => {
         if (!mainJS.includes(listener)) {
           this.warnings.push(`Missing event listener: ${listener}`);
@@ -214,18 +199,18 @@ class PortfolioValidator {
   // AI-OPTIMIZED: Dependencies validation
   async validateDependencies() {
     console.log('📦 Validating dependencies...');
-    
+
     try {
       const html = readFileSync('index.html', 'utf8');
-      
+
       // Check for external dependencies
       const requiredDependencies = [
         'lozad',
         'isotope',
         'just-validate',
-        'gsap'
+        'gsap',
       ];
-      
+
       requiredDependencies.forEach(dep => {
         if (!html.includes(dep)) {
           this.warnings.push(`Missing external dependency: ${dep}`);
@@ -233,12 +218,8 @@ class PortfolioValidator {
       });
 
       // Check for local dependencies
-      const localDependencies = [
-        'css/main.css',
-        'js/main.js',
-        'manifest.json'
-      ];
-      
+      const localDependencies = ['css/main.css', 'js/main.js', 'manifest.json'];
+
       localDependencies.forEach(dep => {
         if (!html.includes(dep)) {
           this.errors.push(`Missing local dependency: ${dep}`);
@@ -254,10 +235,10 @@ class PortfolioValidator {
   // AI-OPTIMIZED: Accessibility validation
   async validateAccessibility() {
     console.log('♿ Validating accessibility...');
-    
+
     try {
       const html = readFileSync('index.html', 'utf8');
-      
+
       // Check for accessibility features
       const accessibilityFeatures = [
         'role=',
@@ -269,9 +250,9 @@ class PortfolioValidator {
         'aria-hidden=',
         'aria-live=',
         'aria-required=',
-        'aria-describedby='
+        'aria-describedby=',
       ];
-      
+
       let accessibilityScore = 0;
       accessibilityFeatures.forEach(feature => {
         if (html.includes(feature)) {
@@ -293,9 +274,9 @@ class PortfolioValidator {
         '<section',
         '<article',
         '<aside',
-        '<footer'
+        '<footer',
       ];
-      
+
       semanticElements.forEach(element => {
         if (!html.includes(element)) {
           this.warnings.push(`Missing semantic element: ${element}`);
@@ -311,10 +292,10 @@ class PortfolioValidator {
   // AI-OPTIMIZED: Performance validation
   async validatePerformance() {
     console.log('⚡ Validating performance...');
-    
+
     try {
       const html = readFileSync('index.html', 'utf8');
-      
+
       // Check for performance optimizations
       const performanceFeatures = [
         'preload',
@@ -322,9 +303,9 @@ class PortfolioValidator {
         'dns-prefetch',
         'lazy',
         'async',
-        'defer'
+        'defer',
       ];
-      
+
       let performanceScore = 0;
       performanceFeatures.forEach(feature => {
         if (html.includes(feature)) {
@@ -333,20 +314,23 @@ class PortfolioValidator {
       });
 
       if (performanceScore < 3) {
-        this.warnings.push(`Low performance optimization score: ${performanceScore}/6`);
+        this.warnings.push(
+          `Low performance optimization score: ${performanceScore}/6`
+        );
       } else {
-        this.success.push(`Performance optimization score: ${performanceScore}/6`);
+        this.success.push(
+          `Performance optimization score: ${performanceScore}/6`
+        );
       }
 
       // Check for critical resources
-      const criticalResources = [
-        'css/main.css',
-        'js/main.js'
-      ];
-      
+      const criticalResources = ['css/main.css', 'js/main.js'];
+
       criticalResources.forEach(resource => {
         if (!html.includes(`preload.*${resource}`)) {
-          this.warnings.push(`Missing preload for critical resource: ${resource}`);
+          this.warnings.push(
+            `Missing preload for critical resource: ${resource}`
+          );
         }
       });
 
@@ -379,11 +363,12 @@ class PortfolioValidator {
       console.log('');
     }
 
-    const totalChecks = this.success.length + this.warnings.length + this.errors.length;
+    const totalChecks =
+      this.success.length + this.warnings.length + this.errors.length;
     const successRate = ((this.success.length / totalChecks) * 100).toFixed(1);
 
     console.log(`📈 Overall Success Rate: ${successRate}%`);
-    
+
     if (this.errors.length === 0) {
       console.log('🎉 All critical validations passed!');
       process.exit(0);
@@ -396,4 +381,4 @@ class PortfolioValidator {
 
 // AI-OPTIMIZED: Run validation
 const validator = new PortfolioValidator();
-validator.validateAll(); 
+validator.validateAll();

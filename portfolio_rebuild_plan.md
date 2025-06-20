@@ -3,7 +3,9 @@
 ## 0. Strategic Integration of External Resources
 
 ### From [Sam's Portfolio Website](https://github.com/colaone1/Sam-s-Portfolio-Website-)
+
 - **Core Files to Preserve and Enhance:**
+
   - `index.html` - Base structure and SEO optimization
   - `css/main.css` - Core styling and component imports
   - `css/layouts/*` - Layout components
@@ -12,6 +14,7 @@
   - `sw.js` - Service worker implementation
 
 - **Content & Assets:**
+
   - Import project data, images, and content structure
   - Preserve existing accessibility solutions
   - Maintain performance optimizations
@@ -22,28 +25,33 @@
   - Maintain performance optimizations
 
 ### From [Open-Source-Testing-Setup](https://github.com/colaone1/Open-Source-Testing-Setup)
+
 - **Testing Infrastructure:**
   - Preserve existing test setup
   - Maintain accessibility checks
   - Keep performance monitoring
 
 ## 1. Project Setup ✅
+
 - [x] Create project structure
 - [x] Set up Git with Husky
 - [x] Create README.md
 
 ## 2. Base Styles ✅
+
 - [x] Preserve and enhance CSS variables
 - [x] Maintain reset.css
 - [x] Update typography.css
 - [x] Enhance utilities.css
 
 ## 3. Layout Components ✅
+
 - [x] Preserve header.css
 - [x] Maintain footer.css
 - [x] Update main.css
 
 ## 4. Theme System ✅
+
 - [x] Enhance theme variables
 - [x] Preserve theme switcher component
 - [x] Maintain theme persistence
@@ -53,6 +61,7 @@
 - [x] Keep reduced motion support
 
 ## 5. Core JavaScript ✅
+
 - [x] Preserve navigation functionality
   - [x] Maintain mobile menu toggle
   - [x] Keep smooth scrolling
@@ -67,6 +76,7 @@
   - [x] Preserve code splitting
 
 ## 6. Primary Components ✅
+
 - [x] Buttons
   - [x] Primary/Secondary variants
   - [x] Icon support
@@ -85,6 +95,7 @@
   - [x] Tabs
 
 ## 7. Home Page Implementation ✅
+
 - [x] Hero section
   - [x] Animated introduction
   - [x] Call-to-action
@@ -99,6 +110,7 @@
   - [x] Project details
 
 ## 8. Secondary Components ✅
+
 - [x] Modals
   - [x] Project details
   - [x] Contact form
@@ -113,6 +125,11 @@
   - [x] Progress indicators
 
 ## 9. About & Projects Pages
+
+- [ ] Fix dark/light mode toggle functionality
+  - [ ] Resolve theme initialization conflicts
+  - [ ] Ensure proper theme persistence
+  - [ ] Test theme switching across all components
 - [ ] About page
   - [ ] Detailed bio
   - [ ] Skills grid
@@ -125,6 +142,7 @@
   - [ ] Project details
 
 ## 10. Tertiary Components
+
 - [ ] Tabs
   - [ ] Content switching
   - [ ] URL integration
@@ -139,6 +157,7 @@
   - [ ] Search results
 
 ## 11. Blog & Contact Pages
+
 - [ ] Blog page
   - [ ] Post listing
   - [ ] Categories
@@ -151,6 +170,7 @@
   - [ ] Success/Error handling
 
 ## 12. Testing & Optimization ✅
+
 - [x] Cross-browser testing
   - [x] Chrome
   - [x] Firefox
@@ -173,6 +193,7 @@
   - [x] Schema markup
 
 ## 13. Deployment
+
 - [ ] Build process
   - [ ] Asset optimization
   - [ ] Code splitting
@@ -188,6 +209,7 @@
   - [ ] Maintenance guide
 
 ## Performance Targets
+
 - Lighthouse score: 95+ for all categories
 - First Contentful Paint: < 1.5s
 - Time to Interactive: < 3.5s
@@ -197,6 +219,7 @@
 - Cumulative Layout Shift: < 0.1
 
 ## Accessibility Targets
+
 - WCAG 2.1 Level AA compliance
 - Keyboard navigation support
 - Screen reader compatibility
@@ -205,6 +228,7 @@
 - High contrast mode support
 
 ## Mobile Optimization
+
 - Responsive design for all screen sizes
 - Touch-friendly interactions
 - Optimized images for mobile
@@ -215,19 +239,23 @@
 ## Implementation Details & Open Source Resources
 
 ### Performance Optimizations
+
 1. **Build Tools & Plugins**
+
    - Vite for fast development and optimized builds
    - vite-plugin-compression2 for gzip compression
    - vite-imagetools for image optimization
    - splitVendorChunkPlugin for code splitting
 
 2. **Caching & Offline Support**
+
    - Service Worker implementation for offline support
    - Cache-first strategy for static assets
    - Network-first strategy for dynamic content
    - Offline fallback page
 
 3. **Image Optimization**
+
    - Responsive images with srcset and sizes
    - WebP format with fallbacks
    - Lazy loading with Intersection Observer
@@ -240,19 +268,23 @@
    - Vendor chunk optimization
 
 ### Accessibility Implementation
+
 1. **ARIA & Semantic HTML**
+
    - Proper ARIA landmarks and roles
    - Semantic HTML structure
    - Skip links for keyboard navigation
    - Focus management
 
 2. **Keyboard Navigation**
+
    - Focus visible states
    - Logical tab order
    - Keyboard shortcuts
    - Focus trapping in modals
 
 3. **Screen Reader Support**
+
    - ARIA labels and descriptions
    - Live regions for dynamic content
    - Proper heading hierarchy
@@ -265,13 +297,16 @@
    - Text scaling support
 
 ### SEO Implementation
+
 1. **Meta Tags & Structured Data**
+
    - Comprehensive meta tags
    - Open Graph and Twitter Cards
    - Schema.org markup
    - Canonical URLs
 
 2. **Technical SEO**
+
    - XML sitemap
    - Robots.txt
    - Mobile-friendly design
@@ -284,13 +319,16 @@
    - Alt text for images
 
 ### Mobile Optimization
+
 1. **Responsive Design**
+
    - Mobile-first approach
    - Fluid typography
    - Flexible layouts
    - Touch-friendly targets
 
 2. **Performance**
+
    - Optimized images
    - Reduced data usage
    - Efficient caching
@@ -303,19 +341,23 @@
    - Form optimization
 
 ### Open Source Resources
+
 1. **Testing Tools**
+
    - Playwright for E2E testing
    - Axe-core for accessibility testing
    - Lighthouse CI for performance monitoring
    - Vitest for unit testing
 
 2. **Build Tools**
+
    - Vite for build optimization
    - PostCSS for CSS processing
    - Terser for JavaScript minification
    - ImageMin for image optimization
 
 3. **Development Tools**
+
    - ESLint for code quality
    - Prettier for code formatting
    - Husky for git hooks
@@ -329,4 +371,4 @@
 
 ---
 
-_This section ensures strategic reuse of proven solutions and testing infrastructure throughout the rebuild process._ 
+_This section ensures strategic reuse of proven solutions and testing infrastructure throughout the rebuild process._

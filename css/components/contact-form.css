@@ -4,7 +4,7 @@
   display: grid;
   gap: var(--spacing-lg);
   max-width: 600px; /* Constrain form width */
-  margin: 0 auto;   /* Center the form */
+  margin: 0 auto; /* Center the form */
 }
 
 .form__group {
@@ -26,7 +26,9 @@
   border-radius: var(--border-radius-sm);
   background-color: var(--color-bg-secondary);
   color: var(--color-text-primary);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
   font-size: var(--text-base);
   width: 100%;
 }
@@ -64,16 +66,15 @@
   box-shadow: 0 0 0 2px var(--color-error-light);
 }
 
-
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .form__group input,
   .form__group textarea {
     border-width: 2px;
   }
-  
+
   .form__group.is-invalid input,
   .form__group.is-invalid textarea {
     border-width: 3px;
   }
-} 
+}

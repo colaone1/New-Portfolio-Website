@@ -115,10 +115,10 @@
   .nav__link::after {
     height: 3px;
   }
-  
+
   .nav__toggle-icon,
   .nav__toggle-icon::before,
   .nav__toggle-icon::after {
     height: 3px;
   }
-} 
+}
