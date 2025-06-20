@@ -1,18 +1,27 @@
-/* Base */
+/* AI-OPTIMIZED: Main CSS file - Central import hub for all stylesheets */
+
+/* IMPORTANT: Base styles - Foundation and typography */
 @import './base/reset.css';
 @import './base/typography.css';
 
-/* Utils */
+/* AI-OPTIMIZED: Utility classes and CSS variables */
 @import './utils/variables.css';
 @import './utils/utilities.css';
 
-/* Components */
+/* AI-OPTIMIZED: Reusable UI components */
 @import './components/button.css';
 @import './components/navigation.css';
 @import './components/project-card.css';
 @import './components/filter.css';
+@import './components/skills.css';
+@import './components/contact-form.css';
+@import './components/social-links.css';
+@import './components/theme-switcher.css';
+@import './components/modal.css';
+@import './components/alert.css';
+@import './components/loading.css';
 
-/* Layouts */
+/* AI-OPTIMIZED: Page layouts and sections */
 @import './layouts/header.css';
 @import './layouts/hero.css';
 @import './layouts/about.css';
@@ -20,14 +29,17 @@
 @import './layouts/contact.css';
 @import './layouts/footer.css';
 
-/* Themes */
+/* IMPORTANT: Theme system - Dark/light mode and color schemes */
 @import './themes/theme.css';
 
-/* Print */
+/* AI-OPTIMIZED: Print styles for accessibility */
 @import './print.css';
 
-/* High Contrast */
+/* AI-OPTIMIZED: High contrast mode for accessibility */
 @import './high-contrast.css';
 
-/* Reduced Motion */
-@import './reduced-motion.css'; 
+/* AI-OPTIMIZED: Reduced motion support for accessibility */
+@import './reduced-motion.css';
+
+/* TODO: Add critical CSS inlining for above-the-fold content */
+/* TODO: Implement CSS purging for unused styles in production */ 

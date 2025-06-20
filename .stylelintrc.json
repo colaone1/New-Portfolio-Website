@@ -1,0 +1,80 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "selector-class-pattern": null,
+    "custom-property-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "shorthand-property-no-redundant-values": null,
+    "color-function-notation": "modern",
+    "alpha-value-notation": "percentage",
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["v-deep", "v-global", "v-slotted"]
+      }
+    ],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "function",
+          "if",
+          "each",
+          "include",
+          "mixin"
+        ]
+      }
+    ],
+    "no-empty-source": null,
+    "string-quotes": "single",
+    "declaration-colon-newline-after": null,
+    "value-keyword-case": null,
+    "custom-property-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "selector-pseudo-element-colon-notation": null,
+    "selector-pseudo-class-parentheses-space-inside": null,
+    "media-feature-range-notation": null,
+    "function-url-quotes": null,
+    "function-name-case": null,
+    "function-case": null,
+    "function-whitespace-after": null,
+    "function-parentheses-space-inside": null,
+    "function-parentheses-newline-inside": null,
+    "function-comma-space-after": null,
+    "function-comma-newline-after": null,
+    "function-comma-space-before": null,
+    "function-comma-newline-before": null,
+    "function-calc-no-unspaced-operator": null,
+    "function-linear-gradient-no-nonstandard-direction": null,
+    "function-no-unknown": null,
+    "function-url-no-scheme-relative": null,
+    "function-url-scheme-whitelist": null,
+    "function-whitespace-after": null,
+    "function-parentheses-space-inside": null,
+    "function-parentheses-newline-inside": null,
+    "function-comma-space-after": null,
+    "function-comma-newline-after": null,
+    "function-comma-space-before": null,
+    "function-comma-newline-before": null,
+    "function-calc-no-unspaced-operator": null,
+    "function-linear-gradient-no-nonstandard-direction": null,
+    "function-no-unknown": null,
+    "function-url-no-scheme-relative": null,
+    "function-url-scheme-whitelist": null
+  }
+} 

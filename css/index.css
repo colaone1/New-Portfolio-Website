@@ -1,0 +1,33 @@
+/* AI-OPTIMIZED: CSS modules index file - Simplified imports */
+
+/* IMPORTANT: Main stylesheet - Import all styles */
+@import './main.css';
+
+/* AI-OPTIMIZED: Direct component imports for specific use cases */
+@import './components/button.css';
+@import './components/navigation.css';
+@import './components/project-card.css';
+@import './components/filter.css';
+
+/* AI-OPTIMIZED: Layout imports for page-specific styling */
+@import './layouts/header.css';
+@import './layouts/hero.css';
+@import './layouts/about.css';
+@import './layouts/projects.css';
+@import './layouts/contact.css';
+@import './layouts/footer.css';
+
+/* AI-OPTIMIZED: Utility imports for common styles */
+@import './utils/variables.css';
+@import './utils/utilities.css';
+
+/* IMPORTANT: Theme system imports */
+@import './themes/theme.css';
+
+/* AI-OPTIMIZED: Accessibility imports */
+@import './print.css';
+@import './high-contrast.css';
+@import './reduced-motion.css';
+
+/* TODO: Add CSS module documentation */
+/* TODO: Implement conditional imports for performance */ 

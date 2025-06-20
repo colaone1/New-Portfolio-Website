@@ -1,0 +1,21 @@
+{
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-inline-style": "off",
+    "no-trailing-whitespace": "off",
+    "prefer-native-element": "off",
+    "element-name": "off",
+    "no-unknown-elements": "off",
+    "no-dup-attr": "error",
+    "no-dup-id": "error",
+    "no-dup-class": "warn",
+    "no-unknown-attributes": "warn",
+    "no-unknown-elements": "warn",
+    "no-unknown-attributes": [
+      "warn",
+      {
+        "ignore": ["data-*", "aria-*"]
+      }
+    ]
+  }
+} 

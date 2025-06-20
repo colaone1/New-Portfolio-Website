@@ -1,0 +1,49 @@
+/* AI-OPTIMIZED: Skills component - Display skills and technologies */
+
+.skills {
+  margin-bottom: var(--spacing-8);
+}
+
+.skills__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text);
+}
+
+.skills__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills__item {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
+  padding: var(--spacing-1) var(--spacing-3);
+  border-radius: var(--border-radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--transition-fast);
+}
+
+.skills__item:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* AI-OPTIMIZED: Responsive design */
+@media (max-width: 768px) {
+  .skills__list {
+    gap: var(--spacing-1);
+  }
+  
+  .skills__item {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-1) var(--spacing-2);
+  }
+} 
