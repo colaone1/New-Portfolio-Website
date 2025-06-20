@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development projects and skills">
+    <meta name="keywords" content="web developer, frontend developer, portfolio, projects">
+    <meta name="author" content="Sam">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:title" content="Sam's Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing web development projects and skills">
+    <meta property="og:image" content="https://yourdomain.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourdomain.com/">
+    <meta property="twitter:title" content="Sam's Portfolio">
+    <meta property="twitter:description" content="Professional portfolio showcasing web development projects and skills">
+    <meta property="twitter:image" content="https://yourdomain.com/twitter-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourdomain.com/">
+    
+    <title>Sam's Portfolio</title>
+    
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="data:text/javascript;base64,Ly8gQUktT1BUSU1JWkVEOiBNYWluIEphdmFTY3JpcHQgZmlsZSAtIENvcmUgZnVuY3Rpb25hbGl0eSBhbmQgaW5pdGlhbGl6YXRpb24NCmltcG9ydCB7IFRoZW1lTWFuYWdlciB9IGZyb20gJy4vdGhlbWUuanMnOw0KaW1wb3J0IHsgTmF2aWdhdGlvbiB9IGZyb20gJy4vbmF2aWdhdGlvbi5qcyc7DQoNCi8vIElNUE9SVEFOVDogQ29yZSBpbml0aWFsaXphdGlvbiAtIHJ1bnMgd2hlbiBET00gaXMgcmVhZHkNCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCAoKSA9PiB7DQogIC8vIEFJLU9QVElNSVpFRDogSW5pdGlhbGl6ZSB0aGVtZSBzeXN0ZW0NCiAgY29uc3QgdGhlbWVNYW5hZ2VyID0gbmV3IFRoZW1lTWFuYWdlcigpOw0KICANCiAgLy8gQUktT1BUSU1JWkVEOiBJbml0aWFsaXplIG5hdmlnYXRpb24NCiAgY29uc3QgbmF2aWdhdGlvbiA9IG5ldyBOYXZpZ2F0aW9uKCk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgbGF6eSBsb2FkaW5nIGZvciBwZXJmb3JtYW5jZQ0KICBjb25zdCBsYXp5TG9hZEluc3RhbmNlID0gbG96YWQoJy5sYXp5Jywgew0KICAgIHJvb3RNYXJnaW46ICc1MHB4IDBweCcsDQogICAgdGhyZXNob2xkOiAwLjEsDQogICAgbG9hZGVkOiBmdW5jdGlvbihlbCkgew0KICAgICAgZWwuY2xhc3NMaXN0LmFkZCgnbG9hZGVkJyk7DQogICAgfQ0KICB9KTsNCiAgbGF6eUxvYWRJbnN0YW5jZS5vYnNlcnZlKCk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgcHJvamVjdCBmaWx0ZXJpbmcgd2l0aCBJc290b3BlDQogIGNvbnN0IGdyaWQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcucHJvamVjdHNfX2dyaWQnKTsNCiAgaWYgKGdyaWQpIHsNCiAgICBjb25zdCBpc28gPSBuZXcgSXNvdG9wZShncmlkLCB7DQogICAgICBpdGVtU2VsZWN0b3I6ICcucHJvamVjdC1jYXJkJywNCiAgICAgIGxheW91dE1vZGU6ICdmaXRSb3dzJywNCiAgICAgIHRyYW5zaXRpb25EdXJhdGlvbjogJzAuNHMnDQogICAgfSk7DQogICAgDQogICAgLy8gQUktT1BUSU1JWkVEOiBGaWx0ZXIgaXRlbXMgb24gYnV0dG9uIGNsaWNrDQogICAgY29uc3QgZmlsdGVyQnV0dG9ucyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5maWx0ZXJfX2J0bicpOw0KICAgIGZpbHRlckJ1dHRvbnMuZm9yRWFjaChidXR0b24gPT4gew0KICAgICAgYnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gew0KICAgICAgICBjb25zdCBmaWx0ZXJWYWx1ZSA9IGJ1dHRvbi5nZXRBdHRyaWJ1dGUoJ2RhdGEtZmlsdGVyJyk7DQogICAgICAgIGlzby5hcnJhbmdlKHsgZmlsdGVyOiBmaWx0ZXJWYWx1ZSB9KTsNCiAgICAgICAgDQogICAgICAgIC8vIFVwZGF0ZSBhY3RpdmUgc3RhdGUNCiAgICAgICAgZmlsdGVyQnV0dG9ucy5mb3JFYWNoKGJ0biA9PiBidG4uY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJykpOw0KICAgICAgICBidXR0b24uY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7DQogICAgICB9KTsNCiAgICB9KTsNCiAgfQ0KICANCiAgLy8gSU1QT1JUQU5UOiBJbml0aWFsaXplIGZvcm0gdmFsaWRhdGlvbiBmb3IgdXNlciBpbnB1dCBzZWN1cml0eQ0KICBjb25zdCBmb3JtcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2Zvcm0nKTsNCiAgZm9ybXMuZm9yRWFjaChmb3JtID0+IHsNCiAgICBjb25zdCB2YWxpZGF0b3IgPSBuZXcgSnVzdFZhbGlkYXRlKGZvcm0sIHsNCiAgICAgIHZhbGlkYXRlQmVmb3JlU3VibWl0dGluZzogdHJ1ZSwNCiAgICAgIGxvY2tGb3JtOiB0cnVlLA0KICAgICAgZm9jdXNJbnZhbGlkRmllbGQ6IHRydWUsDQogICAgICBlcnJvckZpZWxkQ3NzQ2xhc3M6ICdpcy1pbnZhbGlkJywNCiAgICAgIHN1Y2Nlc3NGaWVsZENzc0NsYXNzOiAnaXMtdmFsaWQnDQogICAgfSk7DQogICAgDQogICAgLy8gQUktT1BUSU1JWkVEOiBBZGQgdmFsaWRhdGlvbiBydWxlcw0KICAgIHZhbGlkYXRvcg0KICAgICAgLmFkZEZpZWxkKCdbbmFtZT0ibmFtZSJdJywgWw0KICAgICAgICB7IHJ1bGU6ICdyZXF1aXJlZCcsIGVycm9yTWVzc2FnZTogJ05hbWUgaXMgcmVxdWlyZWQnIH0sDQogICAgICAgIHsgcnVsZTogJ21pbkxlbmd0aCcsIHZhbHVlOiAyLCBlcnJvck1lc3NhZ2U6ICdOYW1lIG11c3QgYmUgYXQgbGVhc3QgMiBjaGFyYWN0ZXJzJyB9DQogICAgICBdKQ0KICAgICAgLmFkZEZpZWxkKCdbbmFtZT0iZW1haWwiXScsIFsNCiAgICAgICAgeyBydWxlOiAncmVxdWlyZWQnLCBlcnJvck1lc3NhZ2U6ICdFbWFpbCBpcyByZXF1aXJlZCcgfSwNCiAgICAgICAgeyBydWxlOiAnZW1haWwnLCBlcnJvck1lc3NhZ2U6ICdQbGVhc2UgZW50ZXIgYSB2YWxpZCBlbWFpbCcgfQ0KICAgICAgXSkNCiAgICAgIC5hZGRGaWVsZCgnW25hbWU9Im1lc3NhZ2UiXScsIFsNCiAgICAgICAgeyBydWxlOiAncmVxdWlyZWQnLCBlcnJvck1lc3NhZ2U6ICdNZXNzYWdlIGlzIHJlcXVpcmVkJyB9LA0KICAgICAgICB7IHJ1bGU6ICdtaW5MZW5ndGgnLCB2YWx1ZTogMTAsIGVycm9yTWVzc2FnZTogJ01lc3NhZ2UgbXVzdCBiZSBhdCBsZWFzdCAxMCBjaGFyYWN0ZXJzJyB9DQogICAgICBdKTsNCiAgfSk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgYW5pbWF0aW9ucyAocmVzcGVjdHMgcmVkdWNlZCBtb3Rpb24gcHJlZmVyZW5jZSkNCiAgaWYgKCF0aGVtZU1hbmFnZXIuc2hvdWxkRGlzYWJsZUFuaW1hdGlvbnMoKSkgew0KICAgIGdzYXAuZnJvbSgnLmhlcm9fX3RpdGxlJywgew0KICAgICAgZHVyYXRpb246IDEsDQogICAgICB5OiA1MCwNCiAgICAgIG9wYWNpdHk6IDAsDQogICAgICBlYXNlOiAncG93ZXIzLm91dCcNCiAgICB9KTsNCiAgICANCiAgICBnc2FwLmZyb20oJy5oZXJvX19zdWJ0aXRsZScsIHsNCiAgICAgIGR1cmF0aW9uOiAxLA0KICAgICAgeTogMzAsDQogICAgICBvcGFjaXR5OiAwLA0KICAgICAgZWFzZTogJ3Bvd2VyMy5vdXQnLA0KICAgICAgZGVsYXk6IDAuMg0KICAgIH0pOw0KICAgIA0KICAgIGdzYXAuZnJvbSgnLmhlcm9fX2N0YScsIHsNCiAgICAgIGR1cmF0aW9uOiAxLA0KICAgICAgeTogMjAsDQogICAgICBvcGFjaXR5OiAwLA0KICAgICAgZWFzZTogJ3Bvd2VyMy5vdXQnLA0KICAgICAgZGVsYXk6IDAuNA0KICAgIH0pOw0KICB9DQp9KTsNCg0KLy8gVE9ETzogQWRkIGVycm9yIGhhbmRsaW5nIGZvciBleHRlcm5hbCBsaWJyYXJ5IGRlcGVuZGVuY2llcw0KLy8gVE9ETzogSW1wbGVtZW50IHBlcmZvcm1hbmNlIG1vbml0b3JpbmcgZm9yIGFuaW1hdGlvbnMNCi8vIFRPRE86IEFkZCBhY2Nlc3NpYmlsaXR5IGVuaGFuY2VtZW50cyBmb3IgZm9ybSB2YWxpZGF0aW9uIA==" as="script">
+    <link rel="preload" href="assets/fonts/your-main-font.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Styles -->
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/manifest-DgCljWYD.json">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Sam",
+      "url": "https://yourdomain.com",
+      "jobTitle": "Web Developer",
+      "sameAs": [
+        "https://github.com/yourusername",
+        "https://linkedin.com/in/yourusername",
+        "https://twitter.com/yourusername"
+      ]
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-uS5l0OOn.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-ErpQk2Mb.css">
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav container" role="navigation" aria-label="Main navigation">
+            <a href="/" class="nav__logo" aria-label="Home">Sam</a>
+            <ul class="nav__list">
+                <li><a href="/" class="nav__link" aria-current="page">Home</a></li>
+                <li><a href="/about" class="nav__link">About</a></li>
+                <li><a href="/projects" class="nav__link">Projects</a></li>
+                <li><a href="/blog" class="nav__link">Blog</a></li>
+                <li><a href="/contact" class="nav__link">Contact</a></li>
+            </ul>
+            
+            <div class="theme-switcher" role="group" aria-label="Theme switcher">
+                <button class="theme-switcher__button" data-theme-toggle aria-pressed="false" aria-label="Toggle theme">
+                    <svg class="theme-switcher__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                    </svg>
+                    <span class="theme-switcher__text">Theme</span>
+                </button>
+            </div>
+            
+            <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+                <span class="nav__toggle-icon" aria-hidden="true"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <h1 id="hero-title" class="hero__title">Hi, I'm Sam</h1>
+                <p class="hero__subtitle">Web Developer & Designer</p>
+                <div class="hero__cta">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section__title">About Me</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>I'm a passionate web developer focused on creating beautiful, performant, and accessible web experiences.</p>
+                    </div>
+                    <div class="about__skills">
+                        <h3 id="skills-title">Skills</h3>
+                        <ul class="skills__list" aria-labelledby="skills-title">
+                            <!-- Skills will be dynamically populated -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <h2 id="projects-title" class="section__title">Projects</h2>
+                
+                <!-- Project Filters -->
+                <div class="filter" role="group" aria-label="Project filters">
+                    <div class="filter__group">
+                        <button class="filter__btn active" data-filter="*" aria-pressed="true">All</button>
+                        <button class="filter__btn" data-filter=".web" aria-pressed="false">Web</button>
+                        <button class="filter__btn" data-filter=".mobile" aria-pressed="false">Mobile</button>
+                        <button class="filter__btn" data-filter=".data" aria-pressed="false">Data</button>
+                    </div>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects__grid" role="list">
+                    <!-- Project cards will be dynamically populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section__title">Get In Touch</h2>
+                <form class="contact__form" id="contactForm" novalidate>
+                    <div class="form__group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <div class="form__error" id="name-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <div class="form__error" id="email-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <div class="form__group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required aria-required="true"></textarea>
+                        <div class="form__error" id="message-error" role="alert" aria-live="polite"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__brand">
+                    <a href="/" class="footer__logo" aria-label="Home">Sam</a>
+                    <p class="footer__description">
+                        A passionate developer creating beautiful and functional web experiences.
+                    </p>
+                    <div class="footer__social" role="group" aria-label="Social media links">
+                        <a href="#" class="footer__social-link" aria-label="GitHub">
+                            <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn">
+                            <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">
+                            <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <nav aria-labelledby="footer-links-title">
+                    <h3 id="footer-links-title" class="footer__title">Quick Links</h3>
+                    <ul class="footer__links">
+                        <li><a href="/" class="footer__link">Home</a></li>
+                        <li><a href="/about" class="footer__link">About</a></li>
+                        <li><a href="/projects" class="footer__link">Projects</a></li>
+                        <li><a href="/blog" class="footer__link">Blog</a></li>
+                        <li><a href="/contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </nav>
+                
+                <div aria-labelledby="footer-contact-title">
+                    <h3 id="footer-contact-title" class="footer__title">Contact</h3>
+                    <div class="footer__contact-item">
+                        <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        <a href="mailto:email@example.com" class="footer__contact-text">email@example.com</a>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg class="footer__contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <a href="tel:+1234567890" class="footer__contact-text">+1 234 567 890</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    &copy; 2024 Sam. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed: ', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html> 
