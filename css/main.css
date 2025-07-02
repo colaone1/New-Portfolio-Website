@@ -43,3 +43,8 @@
 
 /* TODO: Add critical CSS inlining for above-the-fold content */
 /* TODO: Implement CSS purging for unused styles in production */
+
+body, main {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}

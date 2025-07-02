@@ -9,6 +9,7 @@
   transition: all var(--transition-normal);
   border: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
+  min-height: 420px; /* Adjust as needed for your content */
 }
 
 .project-card:hover {

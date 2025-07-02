@@ -21,8 +21,8 @@
 }
 
 .skills__item {
-  background-color: var(--color-primary-light);
-  color: var(--color-primary);
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
   padding: var(--spacing-1) var(--spacing-3);
   border-radius: var(--border-radius-full);
   font-size: var(--font-size-sm);
@@ -32,7 +32,7 @@
 
 .skills__item:hover {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-bg-primary);
   transform: translateY(-1px);
 }
 
