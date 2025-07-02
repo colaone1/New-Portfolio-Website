@@ -32,6 +32,7 @@
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: var(--spacing-xl);
   margin-top: var(--spacing-xl);
+  align-items: stretch;
 }
 
 .projects__filter {

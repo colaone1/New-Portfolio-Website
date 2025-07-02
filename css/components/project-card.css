@@ -7,9 +7,15 @@
   border-radius: var(--border-radius-md);
   overflow: hidden;
   transition: all var(--transition-normal);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
-  min-height: 420px; /* Adjust as needed for your content */
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  min-height: 420px;
+}
+
+.project-card,
+.project-card:focus,
+.project-card:hover {
+  border-width: 1px;
 }
 
 .project-card:hover {
@@ -18,11 +24,17 @@
   border-color: var(--color-primary);
 }
 
+.project-card:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
 .project-card__image-wrapper {
   width: 100%;
-  padding-top: 75%; /* 4:3 Aspect Ratio */
+  height: 200px; /* Fixed height for perfect alignment */
   position: relative;
   overflow: hidden;
+  background-color: var(--color-bg-tertiary); /* fallback for missing images */
 }
 
 .project-card__image {
@@ -33,6 +45,8 @@
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-normal);
+  display: block;
+  background-color: var(--color-bg-tertiary); /* fallback for broken images */
 }
 
 .project-card:hover .project-card__image {
@@ -43,7 +57,7 @@
   padding: var(--spacing-4);
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Allows content to fill space */
+  flex: 1 1 auto;
 }
 
 .project-card__title {

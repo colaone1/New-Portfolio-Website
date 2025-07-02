@@ -1,6 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="AI-optimized portfolio website with accessibility and performance focus">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sam">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Sam's Portfolio">
+    <meta property="og:description" content="AI-optimized portfolio website with accessibility and performance focus">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <meta property="og:image" content="/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -47,12 +64,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
     <!-- Preload critical assets -->
-
-    <link
-      rel="preload"
-      href="data:text/javascript;base64,Ly8gQUktT1BUSU1JWkVEOiBNYWluIEphdmFTY3JpcHQgZmlsZSAtIENvcmUgZnVuY3Rpb25hbGl0eSBhbmQgaW5pdGlhbGl6YXRpb24NCmltcG9ydCB7IFRoZW1lTWFuYWdlciB9IGZyb20gJy4vdGhlbWUuanMnOw0KaW1wb3J0IHsgTmF2aWdhdGlvbiB9IGZyb20gJy4vbmF2aWdhdGlvbi5qcyc7DQoNCi8vIElNUE9SVEFOVDogQ29yZSBpbml0aWFsaXphdGlvbiAtIHJ1bnMgd2hlbiBET00gaXMgcmVhZHkNCmRvY3VtZW50LmFkZEV2ZW50TGlzdGVuZXIoJ0RPTUNvbnRlbnRMb2FkZWQnLCAoKSA9PiB7DQogIC8vIEFJLU9QVElNSVpFRDogSW5pdGlhbGl6ZSB0aGVtZSBzeXN0ZW0NCiAgY29uc3QgdGhlbWVNYW5hZ2VyID0gbmV3IFRoZW1lTWFuYWdlcigpOw0KICANCiAgLy8gQUktT1BUSU1JWkVEOiBJbml0aWFsaXplIG5hdmlnYXRpb24NCiAgY29uc3QgbmF2aWdhdGlvbiA9IG5ldyBOYXZpZ2F0aW9uKCk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgbGF6eSBsb2FkaW5nIGZvciBwZXJmb3JtYW5jZQ0KICBjb25zdCBsYXp5TG9hZEluc3RhbmNlID0gbG96YWQoJy5sYXp5Jywgew0KICAgIHJvb3RNYXJnaW46ICc1MHB4IDBweCcsDQogICAgdGhyZXNob2xkOiAwLjEsDQogICAgbG9hZGVkOiBmdW5jdGlvbihlbCkgew0KICAgICAgZWwuY2xhc3NMaXN0LmFkZCgnbG9hZGVkJyk7DQogICAgfQ0KICB9KTsNCiAgbGF6eUxvYWRJbnN0YW5jZS5vYnNlcnZlKCk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgcHJvamVjdCBmaWx0ZXJpbmcgd2l0aCBJc290b3BlDQogIGNvbnN0IGdyaWQgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCcucHJvamVjdHNfX2dyaWQnKTsNCiAgaWYgKGdyaWQpIHsNCiAgICBjb25zdCBpc28gPSBuZXcgSXNvdG9wZShncmlkLCB7DQogICAgICBpdGVtU2VsZWN0b3I6ICcucHJvamVjdC1jYXJkJywNCiAgICAgIGxheW91dE1vZGU6ICdmaXRSb3dzJywNCiAgICAgIHRyYW5zaXRpb25EdXJhdGlvbjogJzAuNHMnDQogICAgfSk7DQogICAgDQogICAgLy8gQUktT1BUSU1JWkVEOiBGaWx0ZXIgaXRlbXMgb24gYnV0dG9uIGNsaWNrDQogICAgY29uc3QgZmlsdGVyQnV0dG9ucyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJy5maWx0ZXJfX2J0bicpOw0KICAgIGZpbHRlckJ1dHRvbnMuZm9yRWFjaChidXR0b24gPT4gew0KICAgICAgYnV0dG9uLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gew0KICAgICAgICBjb25zdCBmaWx0ZXJWYWx1ZSA9IGJ1dHRvbi5nZXRBdHRyaWJ1dGUoJ2RhdGEtZmlsdGVyJyk7DQogICAgICAgIGlzby5hcnJhbmdlKHsgZmlsdGVyOiBmaWx0ZXJWYWx1ZSB9KTsNCiAgICAgICAgDQogICAgICAgIC8vIFVwZGF0ZSBhY3RpdmUgc3RhdGUNCiAgICAgICAgZmlsdGVyQnV0dG9ucy5mb3JFYWNoKGJ0biA9PiBidG4uY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJykpOw0KICAgICAgICBidXR0b24uY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7DQogICAgICB9KTsNCiAgICB9KTsNCiAgfQ0KICANCiAgLy8gSU1QT1JUQU5UOiBJbml0aWFsaXplIGZvcm0gdmFsaWRhdGlvbiBmb3IgdXNlciBpbnB1dCBzZWN1cml0eQ0KICBjb25zdCBmb3JtcyA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3JBbGwoJ2Zvcm0nKTsNCiAgZm9ybXMuZm9yRWFjaChmb3JtID0+IHsNCiAgICBjb25zdCB2YWxpZGF0b3IgPSBuZXcgSnVzdFZhbGlkYXRlKGZvcm0sIHsNCiAgICAgIHZhbGlkYXRlQmVmb3JlU3VibWl0dGluZzogdHJ1ZSwNCiAgICAgIGxvY2tGb3JtOiB0cnVlLA0KICAgICAgZm9jdXNJbnZhbGlkRmllbGQ6IHRydWUsDQogICAgICBlcnJvckZpZWxkQ3NzQ2xhc3M6ICdpcy1pbnZhbGlkJywNCiAgICAgIHN1Y2Nlc3NGaWVsZENzc0NsYXNzOiAnaXMtdmFsaWQnDQogICAgfSk7DQogICAgDQogICAgLy8gQUktT1BUSU1JWkVEOiBBZGQgdmFsaWRhdGlvbiBydWxlcw0KICAgIHZhbGlkYXRvcg0KICAgICAgLmFkZEZpZWxkKCdbbmFtZT0ibmFtZSJdJywgWw0KICAgICAgICB7IHJ1bGU6ICdyZXF1aXJlZCcsIGVycm9yTWVzc2FnZTogJ05hbWUgaXMgcmVxdWlyZWQnIH0sDQogICAgICAgIHsgcnVsZTogJ21pbkxlbmd0aCcsIHZhbHVlOiAyLCBlcnJvck1lc3NhZ2U6ICdOYW1lIG11c3QgYmUgYXQgbGVhc3QgMiBjaGFyYWN0ZXJzJyB9DQogICAgICBdKQ0KICAgICAgLmFkZEZpZWxkKCdbbmFtZT0iZW1haWwiXScsIFsNCiAgICAgICAgeyBydWxlOiAncmVxdWlyZWQnLCBlcnJvck1lc3NhZ2U6ICdFbWFpbCBpcyByZXF1aXJlZCcgfSwNCiAgICAgICAgeyBydWxlOiAnZW1haWwnLCBlcnJvck1lc3NhZ2U6ICdQbGVhc2UgZW50ZXIgYSB2YWxpZCBlbWFpbCcgfQ0KICAgICAgXSkNCiAgICAgIC5hZGRGaWVsZCgnW25hbWU9Im1lc3NhZ2UiXScsIFsNCiAgICAgICAgeyBydWxlOiAncmVxdWlyZWQnLCBlcnJvck1lc3NhZ2U6ICdNZXNzYWdlIGlzIHJlcXVpcmVkJyB9LA0KICAgICAgICB7IHJ1bGU6ICdtaW5MZW5ndGgnLCB2YWx1ZTogMTAsIGVycm9yTWVzc2FnZTogJ01lc3NhZ2UgbXVzdCBiZSBhdCBsZWFzdCAxMCBjaGFyYWN0ZXJzJyB9DQogICAgICBdKTsNCiAgfSk7DQogIA0KICAvLyBBSS1PUFRJTUlaRUQ6IEluaXRpYWxpemUgYW5pbWF0aW9ucyAocmVzcGVjdHMgcmVkdWNlZCBtb3Rpb24gcHJlZmVyZW5jZSkNCiAgaWYgKCF0aGVtZU1hbmFnZXIuc2hvdWxkRGlzYWJsZUFuaW1hdGlvbnMoKSkgew0KICAgIGdzYXAuZnJvbSgnLmhlcm9fX3RpdGxlJywgew0KICAgICAgZHVyYXRpb246IDEsDQogICAgICB5OiA1MCwNCiAgICAgIG9wYWNpdHk6IDAsDQogICAgICBlYXNlOiAncG93ZXIzLm91dCcNCiAgICB9KTsNCiAgICANCiAgICBnc2FwLmZyb20oJy5oZXJvX19zdWJ0aXRsZScsIHsNCiAgICAgIGR1cmF0aW9uOiAxLA0KICAgICAgeTogMzAsDQogICAgICBvcGFjaXR5OiAwLA0KICAgICAgZWFzZTogJ3Bvd2VyMy5vdXQnLA0KICAgICAgZGVsYXk6IDAuMg0KICAgIH0pOw0KICAgIA0KICAgIGdzYXAuZnJvbSgnLmhlcm9fX2N0YScsIHsNCiAgICAgIGR1cmF0aW9uOiAxLA0KICAgICAgeTogMjAsDQogICAgICBvcGFjaXR5OiAwLA0KICAgICAgZWFzZTogJ3Bvd2VyMy5vdXQnLA0KICAgICAgZGVsYXk6IDAuNA0KICAgIH0pOw0KICB9DQp9KTsNCg0KLy8gVE9ETzogQWRkIGVycm9yIGhhbmRsaW5nIGZvciBleHRlcm5hbCBsaWJyYXJ5IGRlcGVuZGVuY2llcw0KLy8gVE9ETzogSW1wbGVtZW50IHBlcmZvcm1hbmNlIG1vbml0b3JpbmcgZm9yIGFuaW1hdGlvbnMNCi8vIFRPRE86IEFkZCBhY2Nlc3NpYmlsaXR5IGVuaGFuY2VtZW50cyBmb3IgZm9ybSB2YWxpZGF0aW9uIA=="
-      as="script"
-    />
+    <link rel="preload" href="/assets/main-CwVEzqos.js" as="script" />
     <link
       rel="preload"
       href="assets/fonts/your-main-font.woff2"
@@ -66,7 +78,13 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/manifest-DgCljWYD.json" />
+    <link rel="manifest" href="/assets/manifest-BOWAkVLY.json" />
+
+    <!-- External Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/just-validate@3.8.1/dist/just-validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -83,27 +101,27 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-uS5l0OOn.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-ErpQk2Mb.css" />
+    <script type="module" crossorigin src="/assets/index-ARXGqhxl.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BPgrGkry.css">
   </head>
   <body>
     <!-- Skip to main content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
-    <header class="header" role="banner">
-      <nav class="nav container" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav__logo" aria-label="Home">Sam</a>
+    <header class="header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#" class="nav__logo" aria-label="Home">Sam</a>
         <ul class="nav__list">
-          <li><a href="/" class="nav__link" aria-current="page">Home</a></li>
-          <li><a href="/about" class="nav__link">About</a></li>
-          <li><a href="/projects" class="nav__link">Projects</a></li>
-          <li><a href="/blog" class="nav__link">Blog</a></li>
-          <li><a href="/contact" class="nav__link">Contact</a></li>
+          <li><a href="#" class="nav__link" aria-current="page">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
 
         <div class="theme-switcher" role="group" aria-label="Theme switcher">
           <button
+            type="button"
             class="theme-switcher__button"
             data-theme-toggle
             aria-pressed="false"
@@ -126,6 +144,7 @@
         </div>
 
         <button
+          type="button"
           class="nav__toggle"
           aria-label="Toggle navigation"
           aria-expanded="false"
@@ -136,15 +155,15 @@
       </nav>
     </header>
 
-    <main id="main-content" role="main">
+    <main id="main-content">
       <!-- Hero Section -->
       <section class="hero" aria-labelledby="hero-title">
         <div class="container">
-          <h1 id="hero-title" class="hero__title">Hi, I'm Sam</h1>
-          <p class="hero__subtitle">Web Developer & Designer</p>
+          <h1 id="hero-title" class="hero__title">Hi, I&apos;m Sam</h1>
+          <p class="hero__subtitle">Web Developer &amp; Designer</p>
           <div class="hero__cta">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="#projects" class="btn btn--primary">View Projects</a>
+            <a href="#contact" class="btn btn--outline">Contact Me</a>
           </div>
         </div>
       </section>
@@ -156,14 +175,21 @@
           <div class="about__content">
             <div class="about__text">
               <p>
-                I'm a passionate web developer focused on creating beautiful,
-                performant, and accessible web experiences.
+                I&apos;m a passionate web developer focused on creating
+                beautiful, performant, and accessible web experiences.
               </p>
             </div>
             <div class="about__skills">
-              <h3 id="skills-title">Skills</h3>
+              <h3 id="skills-title" class="skills__title">Skills</h3>
               <ul class="skills__list" aria-labelledby="skills-title">
-                <!-- Skills will be dynamically populated -->
+                <li class="skills__item">HTML5 &amp; CSS3</li>
+                <li class="skills__item">JavaScript (ES6+)</li>
+                <li class="skills__item">React &amp; Next.js</li>
+                <li class="skills__item">Node.js &amp; Express</li>
+                <li class="skills__item">Accessibility (WCAG)</li>
+                <li class="skills__item">Performance Optimization</li>
+                <li class="skills__item">Vite &amp; Webpack</li>
+                <li class="skills__item">Git &amp; GitHub</li>
               </ul>
             </div>
           </div>
@@ -179,6 +205,7 @@
           <div class="filter" role="group" aria-label="Project filters">
             <div class="filter__group">
               <button
+                type="button"
                 class="filter__btn active"
                 data-filter="*"
                 aria-pressed="true"
@@ -186,6 +213,7 @@
                 All
               </button>
               <button
+                type="button"
                 class="filter__btn"
                 data-filter=".web"
                 aria-pressed="false"
@@ -193,6 +221,7 @@
                 Web
               </button>
               <button
+                type="button"
                 class="filter__btn"
                 data-filter=".mobile"
                 aria-pressed="false"
@@ -200,6 +229,7 @@
                 Mobile
               </button>
               <button
+                type="button"
                 class="filter__btn"
                 data-filter=".data"
                 aria-pressed="false"
@@ -212,6 +242,89 @@
           <!-- Project Grid -->
           <div class="projects__grid" role="list">
             <!-- Project cards will be dynamically populated -->
+            <div class="project-card web" role="listitem">
+              <div class="project-card__image-wrapper">
+                <img
+                  src="https://via.placeholder.com/400x300"
+                  alt="Project 1"
+                  class="project-card__image lazy"
+                />
+              </div>
+              <div class="project-card__content">
+                <div class="project-card__tags">
+                  <span class="project-card__tag">HTML</span>
+                  <span class="project-card__tag">CSS</span>
+                  <span class="project-card__tag">JavaScript</span>
+                </div>
+                <h3 class="project-card__title">Project One</h3>
+                <p class="project-card__description">
+                  A brief description of the first web project.
+                </p>
+                <a href="#" class="btn btn--secondary">View Details</a>
+              </div>
+            </div>
+            <div class="project-card mobile" role="listitem">
+              <div class="project-card__image-wrapper">
+                <img
+                  src="https://via.placeholder.com/400x300"
+                  alt="Project 2"
+                  class="project-card__image lazy"
+                />
+              </div>
+              <div class="project-card__content">
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React Native</span>
+                  <span class="project-card__tag">Firebase</span>
+                </div>
+                <h3 class="project-card__title">Project Two</h3>
+                <p class="project-card__description">
+                  A brief description of the second mobile project.
+                </p>
+                <a href="#" class="btn btn--secondary">View Details</a>
+              </div>
+            </div>
+            <div class="project-card web" role="listitem">
+              <div class="project-card__image-wrapper">
+                <img
+                  src="https://via.placeholder.com/400x300"
+                  alt="Project 3"
+                  class="project-card__image lazy"
+                />
+              </div>
+              <div class="project-card__content">
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Next.js</span>
+                  <span class="project-card__tag">Tailwind</span>
+                  <span class="project-card__tag">Vercel</span>
+                </div>
+                <h3 class="project-card__title">Project Three</h3>
+                <p class="project-card__description">
+                  A brief description of the third web project.
+                </p>
+                <a href="#" class="btn btn--secondary">View Details</a>
+              </div>
+            </div>
+            <div class="project-card data" role="listitem">
+              <div class="project-card__image-wrapper">
+                <img
+                  src="https://via.placeholder.com/400x300"
+                  alt="Project 4"
+                  class="project-card__image lazy"
+                />
+              </div>
+              <div class="project-card__content">
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Python</span>
+                  <span class="project-card__tag">Flask</span>
+                  <span class="project-card__tag">SQL</span>
+                </div>
+                <h3 class="project-card__title">Project Four</h3>
+                <p class="project-card__description">
+                  A brief description of the fourth data project.
+                </p>
+                <a href="#" class="btn btn--secondary">View Details</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -268,18 +381,18 @@
                 aria-live="polite"
               ></div>
             </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" class="btn btn--primary">Send Message</button>
           </form>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
+    <footer class="footer">
       <div class="container">
         <div class="footer__container">
           <div class="footer__brand">
-            <a href="/" class="footer__logo" aria-label="Home">Sam</a>
+            <a href="#" class="footer__logo" aria-label="Home">Sam</a>
             <p class="footer__description">
               A passionate developer creating beautiful and functional web
               experiences.
@@ -328,18 +441,17 @@
             </div>
           </div>
 
-          <nav aria-labelledby="footer-links-title">
+          <nav class="footer__nav" aria-labelledby="footer-links-title">
             <h3 id="footer-links-title" class="footer__title">Quick Links</h3>
             <ul class="footer__links">
-              <li><a href="/" class="footer__link">Home</a></li>
-              <li><a href="/about" class="footer__link">About</a></li>
-              <li><a href="/projects" class="footer__link">Projects</a></li>
-              <li><a href="/blog" class="footer__link">Blog</a></li>
-              <li><a href="/contact" class="footer__link">Contact</a></li>
+              <li><a href="#" class="footer__link">Home</a></li>
+              <li><a href="#about" class="footer__link">About</a></li>
+              <li><a href="#projects" class="footer__link">Projects</a></li>
+              <li><a href="#contact" class="footer__link">Contact</a></li>
             </ul>
           </nav>
 
-          <div aria-labelledby="footer-contact-title">
+          <div class="footer__contact" aria-labelledby="footer-contact-title">
             <h3 id="footer-contact-title" class="footer__title">Contact</h3>
             <div class="footer__contact-item">
               <svg
@@ -372,7 +484,7 @@
                 />
               </svg>
               <a href="tel:+1234567890" class="footer__contact-text"
-                >+1 234 567 890</a
+                >+1&nbsp;234&nbsp;567&nbsp;890</a
               >
             </div>
           </div>
