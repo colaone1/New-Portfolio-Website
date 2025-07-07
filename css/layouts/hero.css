@@ -59,6 +59,32 @@
   }
 }
 
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--spacing-4) 0;
+  }
+  .hero__title {
+    font-size: 2rem;
+  }
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+  .hero__cta {
+    flex-direction: column;
+    gap: var(--spacing-2);
+    align-items: center;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero__title {
+    font-size: 1.5rem;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .hero__title {

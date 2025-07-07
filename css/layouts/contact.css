@@ -74,6 +74,18 @@
   }
 }
 
+@media (max-width: 480px) {
+  .contact {
+    padding: var(--spacing-4) 0;
+  }
+  .contact__content {
+    gap: var(--spacing-md);
+  }
+  .contact__form {
+    padding: var(--spacing-md);
+  }
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .contact__form {

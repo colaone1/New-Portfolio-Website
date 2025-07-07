@@ -75,6 +75,24 @@
   }
 }
 
+@media (max-width: 480px) {
+  .about {
+    padding: var(--spacing-4) 0;
+  }
+  .about__content {
+    gap: var(--spacing-md);
+  }
+  .about__skills {
+    gap: var(--spacing-sm);
+  }
+}
+
+@media (max-width: 375px) {
+  .about__title {
+    font-size: 1.5rem;
+  }
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .skill {

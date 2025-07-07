@@ -46,6 +46,18 @@
   }
 }
 
+@media (max-width: 480px) {
+  .projects {
+    padding: var(--spacing-4) 0;
+  }
+  .projects__grid {
+    gap: var(--spacing-md);
+  }
+  .projects__title {
+    font-size: 1.5rem;
+  }
+}
+
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .projects__title {

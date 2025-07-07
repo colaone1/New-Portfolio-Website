@@ -175,3 +175,33 @@ em {
 
 /* TODO: Add responsive typography adjustments */
 /* TODO: Implement font loading optimization */
+
+@media (max-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+}
