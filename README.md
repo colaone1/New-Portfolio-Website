@@ -1,3 +1,22 @@
+# 🚀 Project Quick Start: Performance, SEO, Accessibility, and Responsiveness
+
+This project follows a strict, prioritized workflow to achieve top scores on Lighthouse and deliver a world-class user experience:
+
+- Minify and bundle all CSS/JS (Vite/Webpack)
+- Enable text compression (gzip/brotli)
+- Inline critical CSS, defer non-critical JS
+- Lazy load and optimize images (WebP/AVIF, Squoosh)
+- Use responsive images and explicit width/height
+- Ensure color contrast, touch targets, and accessible names
+- Add meta tags, structured data, and descriptive alt text
+- Use fluid layouts, media queries, and test on all devices
+- Run automated and manual tests after every change
+- Update troubleshooting and documentation regularly
+
+**See [DEVELOPMENT_APPROACH.md](DEVELOPMENT_APPROACH.md) for the full, step-by-step checklist and best practices.**
+
+---
+
 # Portfolio Website
 
 A modern, performant, and AI-optimized portfolio website built with vanilla JavaScript and modern web technologies. Designed for maximum accessibility, performance, and developer efficiency.
