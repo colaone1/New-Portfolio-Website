@@ -954,3 +954,26 @@ npm update
 
 *Last Updated: December 2024*
 *Version: 2.0* 
+
+## Dark/Light Mode Troubleshooting
+
+### Common Symptoms
+- Theme toggle button does not appear
+- Background or text does not change on theme toggle
+- Some text becomes invisible in dark mode
+- Contact form or skills section does not update with theme
+
+### Root Causes
+- JavaScript errors (e.g., missing dependencies like JustValidate) prevent theme toggle code from running
+- CSS uses old variables (e.g., --color-bg-primary, --color-text-primary) or hardcoded colors
+- Form fields and section text do not use theme variables
+
+### Solutions
+- Move theme toggle JS to the top of DOMContentLoaded to ensure it always runs
+- Update all CSS to use only --color-bg and --color-text for backgrounds and text
+- For forms, ensure all fields, labels, and containers use theme variables for background, text, and border
+- Remove all old theme/dark mode code and variables for a clean, maintainable system
+
+### Testing
+- After changes, run all tests with `npm test`
+- Manually verify theme toggle works for all sections and components 

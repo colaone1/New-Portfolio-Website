@@ -1,50 +1,133 @@
 /* AI-OPTIMIZED: Main CSS file - Central import hub for all stylesheets */
 
-/* IMPORTANT: Base styles - Foundation and typography */
-@import './base/reset.css';
-@import './base/typography.css';
+/* PERFORMANCE: Critical CSS imports first for above-the-fold content */
+@import 'base/reset.css';
+@import 'base/typography.css';
+@import 'utils/variables.css';
+@import 'utils/utilities.css';
 
-/* AI-OPTIMIZED: Utility classes and CSS variables */
-@import './utils/variables.css';
-@import './utils/utilities.css';
+/* PERFORMANCE: Component styles imported after base styles */
+@import 'components/button.css';
+@import 'components/navigation.css';
+@import 'components/project-card.css';
+@import 'components/skills.css';
+@import 'components/contact-form.css';
+@import 'components/modal.css';
+@import 'components/alert.css';
+@import 'components/loading.css';
+@import 'components/filter.css';
+@import 'components/social-links.css';
 
-/* AI-OPTIMIZED: Reusable UI components */
-@import './components/button.css';
-@import './components/navigation.css';
-@import './components/project-card.css';
-@import './components/filter.css';
-@import './components/skills.css';
-@import './components/contact-form.css';
-@import './components/social-links.css';
-@import './components/theme-switcher.css';
-@import './components/modal.css';
-@import './components/alert.css';
-@import './components/loading.css';
+/* PERFORMANCE: Layout styles imported last for proper cascade */
+@import 'layouts/header.css';
+@import 'layouts/hero.css';
+@import 'layouts/about.css';
+@import 'layouts/projects.css';
+@import 'layouts/contact.css';
+@import 'layouts/footer.css';
+@import 'layouts/main.css';
 
-/* AI-OPTIMIZED: Page layouts and sections */
-@import './layouts/header.css';
-@import './layouts/hero.css';
-@import './layouts/about.css';
-@import './layouts/projects.css';
-@import './layouts/contact.css';
-@import './layouts/footer.css';
+/* PERFORMANCE: Accessibility and theme styles */
+@import 'high-contrast.css';
+@import 'reduced-motion.css';
+@import 'print.css';
 
-/* IMPORTANT: Theme system - Dark/light mode and color schemes */
-@import './themes/theme.css';
+/* Minimal Light/Dark Mode CSS Variables */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #212529;
+}
 
-/* AI-OPTIMIZED: Print styles for accessibility */
-@import './print.css';
-
-/* AI-OPTIMIZED: High contrast mode for accessibility */
-@import './high-contrast.css';
-
-/* AI-OPTIMIZED: Reduced motion support for accessibility */
-@import './reduced-motion.css';
-
-/* TODO: Add critical CSS inlining for above-the-fold content */
-/* TODO: Implement CSS purging for unused styles in production */
+html.dark {
+  --color-bg: #212529;
+  --color-text: #f8f9fa;
+}
 
 body, main {
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* AI-OPTIMIZED: Global body and main element styling for theme consistency */
+html, body, main {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  /* PERFORMANCE: Optimize font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* ACCESSIBILITY: Ensure sufficient text contrast */
+  font-display: swap;
+}
+
+/* PERFORMANCE: Optimize critical rendering path */
+* {
+  box-sizing: border-box;
+}
+
+/* TROUBLESHOOTING: Ensure theme variables are always available */
+:root {
+  /* Fallback colors in case CSS variables fail to load */
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #212529;
+  --color-primary: #007bff;
+}
+
+/* AI-OPTIMIZED: Focus management for accessibility */
+*:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* PERFORMANCE: Reduce layout shift with proper image sizing */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ACCESSIBILITY: Skip link for keyboard navigation */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* PERFORMANCE: Optimize animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+input,
+textarea,
+select {
+  background-color: var(--color-bg-primary) !important;
+  color: var(--color-text-primary) !important;
+  border: 1px solid var(--color-border) !important;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--color-primary) !important;
+  outline-offset: 2px !important;
+  border-color: var(--color-primary) !important;
+  background-color: var(--color-bg-secondary) !important;
+  color: var(--color-text-primary) !important;
 }

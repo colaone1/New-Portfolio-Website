@@ -1,46 +1,70 @@
-import js from '@eslint/js';
-
-export default [
-  js.configs.recommended,
-  {
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+    serviceworker: true,
+  },
+  extends: [
+    'eslint:recommended',
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  rules: {
+    'no-console': 'warn',
+    'no-unused-vars': 'warn',
+    'no-undef': 'error',
+  },
+  overrides: [
+    {
+      // Service Worker files
+      files: ['sw.js'],
+      env: {
+        serviceworker: true,
+      },
       globals: {
-        // Browser globals
-        window: 'readonly',
-        document: 'readonly',
-        console: 'readonly',
-        localStorage: 'readonly',
-        sessionStorage: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        requestAnimationFrame: 'readonly',
-        cancelAnimationFrame: 'readonly',
-        CustomEvent: 'readonly',
-        Event: 'readonly',
-        // External libraries
-        lozad: 'readonly',
-        Isotope: 'readonly',
-        JustValidate: 'readonly',
-        gsap: 'readonly',
-        // Test globals
-        describe: 'readonly',
-        it: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-        beforeEach: 'readonly',
-        vi: 'readonly',
+        self: 'readonly',
+        caches: 'readonly',
+        fetch: 'readonly',
       },
     },
-    rules: {
-      'no-unused-vars': 'warn',
-      'no-console': 'warn',
-      'prefer-const': 'error',
-      'no-var': 'error',
-      'no-undef': 'error',
+    {
+      // Node.js scripts
+      files: ['scripts/**/*.js', '*.config.js', 'lighthouserc.js', 'commitlint.config.js'],
+      env: {
+        node: true,
+      },
+      globals: {
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        process: 'readonly',
+        global: 'readonly',
+      },
     },
-  },
-];
+    {
+      // Test files
+      files: ['test/**/*.js', 'tests/**/*.js'],
+      env: {
+        node: true,
+        jest: true,
+      },
+      globals: {
+        global: 'readonly',
+      },
+    },
+    {
+      // Build output (should be ignored but just in case)
+      files: ['dist/**/*.js'],
+      env: {
+        browser: true,
+      },
+      globals: {
+        MutationObserver: 'readonly',
+        fetch: 'readonly',
+      },
+    },
+  ],
+};

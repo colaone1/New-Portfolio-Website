@@ -22,7 +22,7 @@
 
 .skills__item {
   background-color: var(--color-bg-tertiary);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   padding: var(--spacing-1) var(--spacing-3);
   border-radius: var(--border-radius-full);
   font-size: var(--font-size-sm);
@@ -34,6 +34,10 @@
   background-color: var(--color-primary);
   color: var(--color-bg-primary);
   transform: translateY(-1px);
+}
+
+.skills__item, .skills__name, .skills__list, .skills__category {
+  color: var(--color-text);
 }
 
 /* AI-OPTIMIZED: Responsive design */

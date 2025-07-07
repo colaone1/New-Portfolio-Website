@@ -17,12 +17,12 @@
 
 .projects__title {
   font-size: var(--font-size-xxl);
-  color: var(--color-text-primary);
+  color: var(--color-text);
   margin-bottom: var(--spacing-md);
 }
 
 .projects__description {
-  color: var(--color-text-secondary);
+  color: var(--color-text);
   max-width: 60rem;
   margin: 0 auto;
 }
@@ -49,6 +49,6 @@
 /* High Contrast Mode */
 @media (prefers-contrast: high) {
   .projects__title {
-    text-shadow: 2px 2px 0 var(--color-text-primary);
+    text-shadow: 2px 2px 0 var(--color-text);
   }
 }

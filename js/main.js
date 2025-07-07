@@ -1,5 +1,4 @@
 // AI-OPTIMIZED: Main JavaScript file - Core functionality and initialization
-import { ThemeManager } from './theme.js';
 import { Navigation } from './navigation.js';
 import { Modal } from './components/modal.js';
 import { Alert } from './components/alert.js';
@@ -7,11 +6,20 @@ import { Loading } from './components/loading.js';
 
 // IMPORTANT: Core initialization - runs when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // AI-OPTIMIZED: Initialize theme system (single initialization point)
-  const themeManager = new ThemeManager();
-  
-  // AI-OPTIMIZED: Make theme manager globally available for debugging
-  window.themeManager = themeManager;
+  // Add theme toggle button if not present (run this first)
+  if (!document.getElementById('theme-toggle')) {
+    const btn = document.createElement('button');
+    btn.id = 'theme-toggle';
+    btn.textContent = 'Toggle Theme';
+    btn.style.position = 'fixed';
+    btn.style.top = '1rem';
+    btn.style.right = '1rem';
+    btn.style.zIndex = '9999';
+    document.body.appendChild(btn);
+    btn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+  }
 
   // AI-OPTIMIZED: Initialize navigation
   const navigation = new Navigation();
@@ -26,7 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modal,
     alert,
     loading,
-    theme: themeManager,
     navigation,
   };
 
@@ -161,30 +168,28 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // AI-OPTIMIZED: Initialize animations (respects reduced motion preference)
-  if (!themeManager.shouldDisableAnimations()) {
-    gsap.from('.hero__title', {
-      duration: 1,
-      y: 50,
-      opacity: 0,
-      ease: 'power3.out',
-    });
+  gsap.from('.hero__title', {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    ease: 'power3.out',
+  });
 
-    gsap.from('.hero__subtitle', {
-      duration: 1,
-      y: 30,
-      opacity: 0,
-      ease: 'power3.out',
-      delay: 0.2,
-    });
+  gsap.from('.hero__subtitle', {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    ease: 'power3.out',
+    delay: 0.2,
+  });
 
-    gsap.from('.hero__cta', {
-      duration: 1,
-      y: 20,
-      opacity: 0,
-      ease: 'power3.out',
-      delay: 0.4,
-    });
-  }
+  gsap.from('.hero__cta', {
+    duration: 1,
+    y: 20,
+    opacity: 0,
+    ease: 'power3.out',
+    delay: 0.4,
+  });
 
   // AI-OPTIMIZED: Initialize loading states for images
   const images = document.querySelectorAll('img[data-src]');

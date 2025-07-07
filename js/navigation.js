@@ -1,6 +1,8 @@
 /**
  * Navigation module for handling mobile menu, smooth scrolling, and active link highlighting
  * Based on the original implementation from Sam's Portfolio Website
+ *
+ * AI-OPTIMIZED: Includes troubleshooting comments and robust error handling for navigation and event listeners.
  */
 
 export class Navigation {
@@ -12,22 +14,39 @@ export class Navigation {
     this.isMenuOpen = false;
 
     // Initialize navigation
-    this.init();
+    try {
+      this.init();
+    } catch (err) {
+      // TROUBLESHOOTING: Navigation failed to initialize
+      console.error('Navigation init error:', err);
+    }
   }
 
   init() {
     // Initialize mobile menu
     if (this.mobileMenuButton && this.mobileMenu) {
-      this.mobileMenuButton.addEventListener('click', () => this.toggleMenu());
+      this.mobileMenuButton.addEventListener('click', () => {
+        try {
+          this.toggleMenu();
+        } catch (err) {
+          // TROUBLESHOOTING: Mobile menu toggle failed
+          console.error('Mobile menu toggle error:', err);
+        }
+      });
 
       // Close menu when clicking outside
       document.addEventListener('click', e => {
-        if (
-          this.isMenuOpen &&
-          !e.target.closest('[data-mobile-menu]') &&
-          !e.target.closest('[data-mobile-menu-button]')
-        ) {
-          this.closeMenu();
+        try {
+          if (
+            this.isMenuOpen &&
+            !e.target.closest('[data-mobile-menu]') &&
+            !e.target.closest('[data-mobile-menu-button]')
+          ) {
+            this.closeMenu();
+          }
+        } catch (err) {
+          // TROUBLESHOOTING: Outside click close failed
+          console.error('Menu close on outside click error:', err);
         }
       });
     }
@@ -35,18 +54,28 @@ export class Navigation {
     // Initialize smooth scrolling
     this.navLinks.forEach(link => {
       link.addEventListener('click', e => {
-        const href = link.getAttribute('href');
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          this.scrollToSection(href);
-          this.closeMenu();
+        try {
+          const href = link.getAttribute('href');
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            this.scrollToSection(href);
+            this.closeMenu();
+          }
+        } catch (err) {
+          // TROUBLESHOOTING: Smooth scroll failed
+          console.error('Smooth scroll error:', err);
         }
       });
     });
 
     // Initialize active link highlighting
-    this.updateActiveLink();
-    window.addEventListener('scroll', () => this.updateActiveLink());
+    try {
+      this.updateActiveLink();
+      window.addEventListener('scroll', () => this.updateActiveLink());
+    } catch (err) {
+      // TROUBLESHOOTING: Active link highlighting failed
+      console.error('Active link highlighting error:', err);
+    }
   }
 
   toggleMenu() {

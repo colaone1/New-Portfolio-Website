@@ -120,3 +120,46 @@ Verify all components work together properly
 ---
 
 **Remember: We're building upon a solid foundation, not starting from scratch!**
+
+---
+
+## 🚀 Modern Troubleshooting, Performance, and AI Optimization Principles
+
+### **Open Source & Up-to-Date Practices**
+- **Leverage up-to-date open source libraries** for performance, accessibility, and testing (e.g., GSAP, Isotope, JustValidate, Playwright, Vitest, Lighthouse).
+- **Regularly update dependencies** to benefit from security and performance improvements.
+- **Reference open source solutions** for common problems before custom coding.
+
+### **Troubleshooting & Debugging**
+- **Add troubleshooting comments** in code for common frontend issues (e.g., image loading, form validation, async errors).
+- **Use robust error handling** in JavaScript (try/catch, user-friendly messages, console warnings for devs).
+- **Check browser console and network tab** for errors after each change.
+- **Document known issues and fixes** in code comments and markdown.
+
+### **Performance Optimization**
+- **Lazy load images and assets** (lozad.js or native `loading="lazy"`).
+- **Optimize CSS and JS bundle size** (code splitting, minification, remove dead code).
+- **Use preconnect/preload for critical assets** in HTML.
+- **Test with Lighthouse and Core Web Vitals** after major changes.
+- **Use service workers for caching and offline support** (see `sw.js`).
+
+### **AI & Codebase Quality**
+- **Use AI-optimized comments** (`// AI-OPTIMIZED:`, `// IMPORTANT:`, `// TODO:`) for key logic and known issues.
+- **Maintain a flat, well-organized directory structure** for fast navigation.
+- **Remove empty or unused directories/files** regularly.
+- **Follow consistent naming conventions** for files, variables, and functions.
+- **Keep index files in major directories** for clean imports.
+- **Update documentation and code comments** as you go.
+
+### **Testing & Validation**
+- **Run automated tests** (unit, e2e, accessibility, performance) before/after major changes.
+- **Add manual visual checks** for UI alignment and theme switching.
+- **Use pre-commit hooks** to enforce linting and formatting.
+
+## 🆕 Recent Improvements (2024-07)
+
+- **Service Worker**: Now features robust error handling, AI-optimized comments, and improved offline support (always caches `/offline.html`).
+- **CSS Performance**: `css/main.css` prioritizes critical CSS imports, includes accessibility/performance comments, and robust theme variable fallbacks.
+- **JavaScript Robustness**: Main JS files now include strong error handling and troubleshooting comments for easier debugging and maintenance.
+- **Linting**: ESLint config must be named `eslint.config.cjs` (not `.js`) due to `type: module` in `package.json`.
+- **Documentation**: All major improvements are now reflected in the README and performance summary for transparency and onboarding.

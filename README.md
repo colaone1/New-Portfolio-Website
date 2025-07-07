@@ -262,3 +262,24 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **This portfolio website demonstrates modern web development best practices with a focus on performance, accessibility, and AI-assisted development efficiency.**
+
+## 🆕 Recent Improvements (2024-07)
+
+- **Service Worker**: Enhanced with robust error handling, AI-optimized comments, and improved offline support (now always caches `/offline.html`).
+- **CSS Performance**: `css/main.css` now prioritizes critical CSS imports, includes accessibility/performance comments, and robust theme variable fallbacks.
+- **JavaScript Robustness**: Main JS files now feature strong error handling and troubleshooting comments for easier debugging.
+- **Linting**: ESLint config must be named `eslint.config.cjs` (not `.js`) due to `type: module` in `package.json`.
+
+---
+
+## Dark/Light Mode
+
+This project uses a minimal, robust dark/light mode system:
+- Toggle button in the top right switches between light and dark themes
+- All backgrounds and text use CSS variables: --color-bg and --color-text
+- To add new components, always use these variables for color and background
+
+### Troubleshooting
+- If the theme toggle does not work, check for JavaScript errors in the console
+- If some text or backgrounds do not update, ensure they use the correct variables
+- See TROUBLESHOOTING_GUIDE.md for more details

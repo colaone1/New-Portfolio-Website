@@ -11,6 +11,22 @@
 
 **Status: ⚠️ INCOMPLETE - Theme toggle still needs debugging**
 
+## 🔧 **NEXT SESSION PRIORITIES**
+
+### **Husky Pre-commit Hooks Setup** 🆕
+- [ ] **Resolve dependency conflict** between `vitest` and `html-validate`
+  - [ ] Try installing Husky with `--legacy-peer-deps` flag
+  - [ ] Or update `vitest` and `html-validate` to compatible versions
+  - [ ] Verify all dev tools work together
+- [ ] **Set up Husky pre-commit hooks** to automatically:
+  - [ ] Run ESLint (`npm run lint`)
+  - [ ] Run Prettier (`npm run format`)
+  - [ ] Optionally run tests (`npm run test`)
+- [ ] **Update documentation** to reflect new workflow
+- [ ] **Test pre-commit workflow** with sample commits
+
+**Status: 🔄 PENDING - Dependency conflict needs resolution**
+
 ## ✅ **COMPLETED SECTIONS**
 
 ### **Sections 1-8: Foundation & Core Components** ✅
