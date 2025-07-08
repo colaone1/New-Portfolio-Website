@@ -5,6 +5,7 @@ import { splitVendorChunkPlugin } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/New-Portfolio-Website/',
   server: {
     port: 3000,
     strictPort: true,

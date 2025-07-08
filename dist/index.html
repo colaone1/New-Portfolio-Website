@@ -64,7 +64,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
     <!-- Preload critical assets -->
-    <link rel="preload" href="/assets/main-CCuFy850.js" as="script" />
+    <link rel="preload" href="/New-Portfolio-Website/assets/main-CxEYdYWY.js" as="script" />
     <link
       rel="preload"
       href="assets/fonts/your-main-font.woff2"
@@ -78,12 +78,11 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
     <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/manifest-BOWAkVLY.json" />
+    <link rel="manifest" href="/New-Portfolio-Website/assets/manifest-BOWAkVLY.json" />
 
     <!-- External Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/just-validate@3.8.1/dist/just-validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
     <!-- Structured Data -->
@@ -101,8 +100,9 @@
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/index-xnYaCSLG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-k9F72eJn.css">
+    <script type="module" crossorigin src="/New-Portfolio-Website/assets/index-DhkI366B.js"></script>
+    <link rel="modulepreload" crossorigin href="/New-Portfolio-Website/assets/vendor-Dv0aVFco.js">
+    <link rel="stylesheet" crossorigin href="/New-Portfolio-Website/assets/index-7tFMdUMY.css">
   </head>
   <body>
     <!-- Skip to main content -->
@@ -112,46 +112,29 @@
     <header class="header">
       <nav class="nav container" aria-label="Main navigation">
         <a href="#" class="nav__logo" aria-label="Home">Sam</a>
-        <ul class="nav__list">
-          <li><a href="#" class="nav__link" aria-current="page">Home</a></li>
-          <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#projects" class="nav__link">Projects</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
+        <ul class="nav__list" data-mobile-menu>
+          <li><a href="#main-content" class="nav__link" aria-current="page" data-nav-link>Home</a></li>
+          <li><a href="#about" class="nav__link" data-nav-link>About</a></li>
+          <li><a href="#projects" class="nav__link" data-nav-link>Projects</a></li>
+          <li><a href="#contact" class="nav__link" data-nav-link>Contact</a></li>
         </ul>
 
-        <div class="theme-switcher" role="group" aria-label="Theme switcher">
+        <div class="nav__actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+            <span class="sr-only">Toggle theme</span>
+          </button>
           <button
             type="button"
-            class="theme-switcher__button"
-            data-theme-toggle
-            aria-pressed="false"
-            aria-label="Toggle theme"
+            class="nav__toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-mobile-menu-button
           >
-            <svg
-              class="theme-switcher__icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-              />
-            </svg>
-            <span class="theme-switcher__text">Theme</span>
+            <span class="nav__toggle-icon" aria-hidden="true"></span>
           </button>
         </div>
-
-        <button
-          type="button"
-          class="nav__toggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-        >
-          <span class="nav__toggle-icon" aria-hidden="true"></span>
-        </button>
       </nav>
     </header>
 
@@ -497,7 +480,6 @@
     </footer>
 
     <!-- Scripts -->
-
     <!-- Service Worker Registration -->
     <script>
       if ('serviceWorker' in navigator) {
