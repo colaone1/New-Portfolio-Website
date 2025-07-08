@@ -38,7 +38,7 @@
   --color-text: #212529;
 }
 
-html.dark {
+[data-theme='dark'] {
   --color-bg: #212529;
   --color-text: #f8f9fa;
 }
@@ -67,8 +67,6 @@ html, body, main {
 /* TROUBLESHOOTING: Ensure theme variables are always available */
 :root {
   /* Fallback colors in case CSS variables fail to load */
-  --color-bg-primary: #ffffff;
-  --color-text-primary: #212529;
   --color-primary: #007bff;
 }
 

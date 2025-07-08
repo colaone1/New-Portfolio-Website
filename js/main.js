@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeIcon = themeToggle?.querySelector('.theme-toggle__icon');
 
   function setThemeIcon() {
-    const isDark = document.documentElement.classList.contains('dark');
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     if (themeIcon) {
       themeIcon.innerHTML = isDark
         ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/></svg>`
@@ -23,7 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeToggle) {
     setThemeIcon();
     themeToggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
       setThemeIcon();
     });
   }

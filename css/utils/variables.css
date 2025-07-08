@@ -10,10 +10,13 @@
   --color-background: #ffffff;
   --color-background-hover: #f8fafc;
   --color-border: #e2e8f0;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f8fafc;
 
   /* Text Colors */
   --color-text: #1e293b;
   --color-text-muted: #64748b;
+  --color-text-primary: #1e293b;
 
   /* Status Colors */
   --color-success: #10b981;
@@ -106,4 +109,7 @@
   --color-border: #334155;
   --color-text: #f1f5f9;
   --color-text-muted: #94a3b8;
+  --color-bg-primary: #0f172a;
+  --color-bg-secondary: #1e293b;
+  --color-text-primary: #f1f5f9;
 }

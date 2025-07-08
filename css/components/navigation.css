@@ -148,3 +148,52 @@
     height: 3px;
   }
 }
+
+/* --- Hamburger Icon Centering and Highlight Fix --- */
+.nav__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  min-width: 2.8rem;
+  min-height: 2.8rem;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.2s;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav__toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-primary, #2563eb);
+  z-index: 2;
+}
+.nav__toggle:active {
+  background: var(--color-background-hover, #f8fafc);
+}
+.nav__toggle-icon {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 2.2rem;
+  height: 2px;
+  background: var(--color-text-primary);
+  transition: background 0.2s;
+}
+
+/* --- Themed Mobile Menu --- */
+@media (max-width: 1024px) {
+  .nav__list {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    /* Add a subtle border for contrast in both themes */
+    border-top: 1px solid var(--color-border, #e5e7eb);
+  }
+  .nav__link {
+    color: var(--color-text-primary);
+  }
+}

@@ -350,6 +350,34 @@ export default function ApartmentPage({ params }) {
 }
 ```
 
+### 4. Theme Toggle Issues
+
+**Issue**: Theme toggle not affecting hamburger menu and dropdown
+**Error**: Mobile navigation stays light when theme is toggled to dark
+
+**Root Cause**: Theme toggle was using `.dark` class but CSS expected `[data-theme='dark']` attribute
+
+**Fix**: Updated theme toggle implementation:
+
+```javascript
+// OLD (incorrect):
+document.documentElement.classList.toggle('dark');
+
+// NEW (correct):
+if (document.documentElement.getAttribute('data-theme') === 'dark') {
+  document.documentElement.removeAttribute('data-theme');
+} else {
+  document.documentElement.setAttribute('data-theme', 'dark');
+}
+```
+
+**Additional Changes**:
+1. Added missing theme variables (`--color-bg-primary`, `--color-text-primary`) to both light and dark themes
+2. Removed conflicting CSS that used `.dark` class instead of `[data-theme='dark']`
+3. Updated theme icon detection to use `getAttribute('data-theme')` instead of `classList.contains('dark')`
+
+**Status**: ✅ FIXED - All theme variables now work correctly across all components
+
 ---
 
 ## Styling Issues
