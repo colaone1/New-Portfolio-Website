@@ -85,7 +85,6 @@
     <!-- External Dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/just-validate@3.8.1/dist/just-validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
 
     <!-- Structured Data -->
@@ -113,22 +112,28 @@
       <nav class="nav container" aria-label="Main navigation">
         <a href="#" class="nav__logo" aria-label="Home">Sam</a>
         <ul class="nav__list" data-mobile-menu>
-          <li><a href="#" class="nav__link" aria-current="page" data-nav-link>Home</a></li>
+          <li><a href="#main-content" class="nav__link" aria-current="page" data-nav-link>Home</a></li>
           <li><a href="#about" class="nav__link" data-nav-link>About</a></li>
           <li><a href="#projects" class="nav__link" data-nav-link>Projects</a></li>
           <li><a href="#contact" class="nav__link" data-nav-link>Contact</a></li>
         </ul>
 
-        <button
-          type="button"
-          class="nav__toggle"
-          aria-label="Toggle navigation"
-          aria-expanded="false"
-          aria-controls="nav-menu"
-          data-mobile-menu-button
-        >
-          <span class="nav__toggle-icon" aria-hidden="true"></span>
-        </button>
+        <div class="nav__actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-mobile-menu-button
+          >
+            <span class="nav__toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
       </nav>
     </header>
 

@@ -176,6 +176,43 @@ em {
 /* TODO: Add responsive typography adjustments */
 /* TODO: Implement font loading optimization */
 
+@media (max-width: 1024px) {
+  body {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.7rem;
+  }
+  button, .btn, a.btn {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.2rem;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  button, .btn, a.btn {
+    font-size: 1.3rem;
+    padding: 1rem 1.8rem;
+  }
+}
+
 @media (max-width: 480px) {
   body {
     font-size: 1.2rem;

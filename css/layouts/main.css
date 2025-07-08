@@ -97,3 +97,25 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 1024px) {
+  .container,
+  .nav {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+}
+@media (max-width: 768px) {
+  .container,
+  .nav {
+    padding-left: var(--spacing-md);
+    padding-right: var(--spacing-md);
+  }
+}
+@media (max-width: 480px) {
+  .container,
+  .nav {
+    padding-left: var(--spacing-2);
+    padding-right: var(--spacing-2);
+  }
+}

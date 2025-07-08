@@ -46,12 +46,22 @@
   }
 }
 
+@media (max-width: 600px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    padding-left: var(--spacing-2);
+    padding-right: var(--spacing-2);
+  }
+}
 @media (max-width: 480px) {
   .projects {
     padding: var(--spacing-4) 0;
   }
   .projects__grid {
     gap: var(--spacing-md);
+    padding-left: var(--spacing-1);
+    padding-right: var(--spacing-1);
   }
   .projects__title {
     font-size: 1.5rem;

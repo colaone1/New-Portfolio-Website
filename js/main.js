@@ -3,21 +3,28 @@ import { Navigation } from './navigation.js';
 import { Modal } from './components/modal.js';
 import { Alert } from './components/alert.js';
 import { Loading } from './components/loading.js';
+import JustValidate from 'just-validate';
 
 // IMPORTANT: Core initialization - runs when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Add theme toggle button if not present (run this first)
-  if (!document.getElementById('theme-toggle')) {
-    const btn = document.createElement('button');
-    btn.id = 'theme-toggle';
-    btn.textContent = 'Toggle Theme';
-    btn.style.position = 'fixed';
-    btn.style.top = '1rem';
-    btn.style.right = '1rem';
-    btn.style.zIndex = '9999';
-    document.body.appendChild(btn);
-    btn.addEventListener('click', () => {
+  // THEME TOGGLE: Use icon in navbar
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = themeToggle?.querySelector('.theme-toggle__icon');
+
+  function setThemeIcon() {
+    const isDark = document.documentElement.classList.contains('dark');
+    if (themeIcon) {
+      themeIcon.innerHTML = isDark
+        ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"/></svg>`
+        : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
+    }
+  }
+
+  if (themeToggle) {
+    setThemeIcon();
+    themeToggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
+      setThemeIcon();
     });
   }
 

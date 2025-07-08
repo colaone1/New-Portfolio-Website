@@ -416,6 +416,36 @@ module.exports = {
 
 ---
 
+## Hamburger Menu Stuck Open on Mobile/Tablets
+
+**Issue:**
+- The hamburger menu was always visible (stuck open) on mobile/tablet, even though the JavaScript and markup were correct.
+- Toggling the `.active` class on `.nav__list` had no effect.
+
+**Root Cause:**
+- CSS specificity conflict: another rule elsewhere in the codebase was overriding the intended `display: none`/`display: flex` logic for `.nav__list` and `.nav__list.active`.
+
+**Fix:**
+- Added a high-specificity rule to `css/components/navigation.css`:
+  ```css
+  @media (max-width: 1024px) {
+    .nav__list {
+      display: none !important;
+    }
+    .nav__list.active {
+      display: flex !important;
+    }
+  }
+  ```
+- This ensures the menu is only visible when `.active` is present, regardless of other CSS.
+
+**Diagnostic Steps:**
+- Verified that the JS event fired and toggled the class.
+- Confirmed that toggling the class manually in the console worked.
+- Determined the issue was CSS, not JS or markup.
+
+---
+
 ## Quick Reference
 
 ### Common Commands
