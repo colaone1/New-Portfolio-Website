@@ -23,12 +23,21 @@ document.addEventListener('DOMContentLoaded', () => {
   if (themeToggle) {
     setThemeIcon();
     themeToggle.addEventListener('click', () => {
+      // Save menu open state
+      const wasMenuOpen = window.app?.navigation?.isMenuOpen;
       if (document.documentElement.getAttribute('data-theme') === 'dark') {
         document.documentElement.removeAttribute('data-theme');
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
       }
       setThemeIcon();
+      // Restore menu open state if it was open
+      if (wasMenuOpen && window.app?.navigation?.mobileMenu && window.app?.navigation?.mobileMenuButton) {
+        window.app.navigation.isMenuOpen = true;
+        window.app.navigation.mobileMenu.classList.add('active');
+        window.app.navigation.mobileMenuButton.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+      }
     });
   }
 

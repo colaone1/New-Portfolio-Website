@@ -22,6 +22,9 @@ This plan is designed to help you achieve 100/100/100/100 on Lighthouse and buil
 - **Form labels**: Every input must have a `<label>`.
 - **ARIA**: Use only when necessary, and always match roles/attributes to correct elements.
 - **Test with screen readers**: Use NVDA, VoiceOver, or ChromeVox.
+- **Verify hamburger menu and theme toggle are accessible and persist theme state.**
+- **Verify contact form background matches section background in all themes.**
+- **Verify hamburger menu does not close when toggling theme.**
 
 ## 3. SEO
 - **Meta tags**: Ensure every page has a unique `<title>` and `<meta name="description">`.
@@ -46,6 +49,7 @@ This plan is designed to help you achieve 100/100/100/100 on Lighthouse and buil
 - **Update troubleshooting docs** after every major fix.
 - **Document new patterns/components** in README or docs.
 - **Follow the workflow checklist** (see below) for every session.
+- **All recent theme, navigation, and accessibility fixes are documented in FRONTEND_TROUBLESHOOTING.md.**
 
 ---
 

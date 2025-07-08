@@ -380,6 +380,78 @@ if (document.documentElement.getAttribute('data-theme') === 'dark') {
 
 ---
 
+### 5. Project Section Text Contrast
+
+**Issue**: Text above project cards (e.g., section titles/descriptions) was hard to read on blue backgrounds, especially in dark mode.
+
+**Root Cause**: Text used `--color-text` which did not provide enough contrast on `--color-bg-secondary` (blue background).
+
+**Fix**: Updated `.projects__title` to use `--color-heading` and `.projects__description` to use `--color-text-primary` for better contrast in all themes.
+
+**Status**: ✅ FIXED - Project section text is now readable in all themes.
+
+---
+
+### 6. Contact Form Background Color
+
+**Issue**: Contact form background was black, which clashed with the new dark blue section background in dark mode.
+
+**Root Cause**: Contact form used `--color-bg` instead of `--color-bg-primary`, causing a mismatch with the section background.
+
+**Fix**: Updated `.contact__form` and related elements to use `--color-bg-primary` for consistent appearance.
+
+**Status**: ✅ FIXED - Contact form now matches the section background in all themes.
+
+---
+
+### 7. Hamburger Menu Theme Persistence
+
+**Issue**: Hamburger menu would close automatically when toggling the theme while open.
+
+**Root Cause**: Theme toggle triggered a re-render or event that closed the menu.
+
+**Fix**: Added a MutationObserver to detect theme changes and update the menu's appearance without closing it. The menu now stays open and updates its theme in real time.
+
+**Status**: ✅ FIXED - Hamburger menu remains open and updates theme when toggling.
+
+---
+
+### 8. Theme Toggle Icon Visibility
+
+**Issue**: Theme toggle (moon/sun) icon was hard to see in dark mode.
+
+**Root Cause**: Icon color did not match the hamburger icon and did not update with the theme.
+
+**Fix**: Updated `.theme-toggle__icon` to use `color: var(--color-text-primary)` and transition color with the theme.
+
+**Status**: ✅ FIXED - Theme toggle icon is always visible and matches the hamburger icon.
+
+---
+
+### 9. Contact Form Section Background
+
+**Issue**: Contact form background and fields did not match the section background in dark mode, causing a visual mismatch.
+
+**Root Cause**: The form and its fields used a different background variable than the section.
+
+**Fix**: Updated `.contact__form` and its fields to use `--color-bg-secondary` for background, matching the section in all themes.
+
+**Status**: ✅ FIXED - Contact form now blends seamlessly with the section background.
+
+---
+
+### 10. Hamburger Menu No Longer Closes on Theme Toggle
+
+**Issue**: Hamburger menu would close when clicking the theme toggle button, even if the menu was open.
+
+**Root Cause**: The document click handler in navigation.js did not exclude the theme toggle button, so clicking it was treated as an outside click.
+
+**Fix**: Updated the click handler to ignore clicks on the theme toggle button and its descendants, so the menu stays open when toggling theme.
+
+**Status**: ✅ FIXED - Hamburger menu remains open when toggling theme.
+
+---
+
 ## Styling Issues
 
 ### 1. CSS Module Issues

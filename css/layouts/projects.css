@@ -17,12 +17,12 @@
 
 .projects__title {
   font-size: var(--font-size-xxl);
-  color: var(--color-text);
+  color: var(--color-heading);
   margin-bottom: var(--spacing-md);
 }
 
 .projects__description {
-  color: var(--color-text);
+  color: var(--color-text-primary);
   max-width: 60rem;
   margin: 0 auto;
 }

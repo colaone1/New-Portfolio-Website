@@ -20,6 +20,7 @@ export class Navigation {
       // TROUBLESHOOTING: Navigation failed to initialize
       console.error('Navigation init error:', err);
     }
+    this.observeThemeChange();
   }
 
   init() {
@@ -37,10 +38,13 @@ export class Navigation {
       // Close menu when clicking outside
       document.addEventListener('click', e => {
         try {
+          // Prevent closing menu when clicking the theme toggle
+          const themeToggle = document.getElementById('theme-toggle');
           if (
             this.isMenuOpen &&
             !e.target.closest('[data-mobile-menu]') &&
-            !e.target.closest('[data-mobile-menu-button]')
+            !e.target.closest('[data-mobile-menu-button]') &&
+            (!themeToggle || (!themeToggle.contains(e.target) && e.target !== themeToggle))
           ) {
             this.closeMenu();
           }
@@ -130,5 +134,19 @@ export class Navigation {
         });
       }
     });
+  }
+
+  // Add this method to observe theme changes
+  observeThemeChange() {
+    const observer = new MutationObserver(() => {
+      // Just trigger a reflow or update if needed, but do not close the menu
+      if (this.isMenuOpen) {
+        // Optionally, force a redraw or update menu styles if needed
+        this.mobileMenu.classList.remove('force-repaint');
+        void this.mobileMenu.offsetWidth;
+        this.mobileMenu.classList.add('force-repaint');
+      }
+    });
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
   }
 }

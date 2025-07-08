@@ -17,6 +17,9 @@
   --color-text: #1e293b;
   --color-text-muted: #64748b;
   --color-text-primary: #1e293b;
+  --color-heading: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-bg-tertiary: #e5eaf3;
 
   /* Status Colors */
   --color-success: #10b981;
@@ -112,4 +115,7 @@
   --color-bg-primary: #0f172a;
   --color-bg-secondary: #1e293b;
   --color-text-primary: #f1f5f9;
+  --color-heading: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-bg-tertiary: #192642;
 }

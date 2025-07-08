@@ -30,6 +30,9 @@ A modern, performant, and AI-optimized portfolio website built with vanilla Java
 - ✅ Performance optimized with 95+ Lighthouse scores
 - ✅ Modern animations with reduced motion support
 - ✅ Accessibility focused (WCAG 2.1 Level AA)
+- ✅ Improved theme system: theme toggle, persistent hamburger menu theme, better text contrast, and accessible form backgrounds
+- ✅ Contact form background now matches section background in all themes
+- ✅ Hamburger menu no longer closes when toggling theme
 
 ### **AI-Optimized Features**
 
@@ -173,6 +176,10 @@ import { Navigation } from './js';
 - High contrast mode
 - Print optimization
 - Reduced motion support
+- Persistent hamburger menu theme and improved theme toggle icon visibility
+- Improved text and form background contrast for accessibility
+- Contact form background now matches section background in all themes
+- Hamburger menu no longer closes when toggling theme
 
 ### **Component Library**
 
@@ -302,3 +309,7 @@ This project uses a minimal, robust dark/light mode system:
 - If the theme toggle does not work, check for JavaScript errors in the console
 - If some text or backgrounds do not update, ensure they use the correct variables
 - See TROUBLESHOOTING_GUIDE.md for more details
+
+---
+
+**See [FRONTEND_TROUBLESHOOTING.md](FRONTEND_TROUBLESHOOTING.md) for details on recent fixes and accessibility improvements.**

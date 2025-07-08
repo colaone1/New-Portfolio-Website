@@ -155,6 +155,8 @@ select:focus {
   height: 2.2rem;
   margin: auto;
   pointer-events: none;
+  color: var(--color-text-primary);
+  transition: color 0.2s;
 }
 .theme-toggle:focus-visible {
   outline: none;

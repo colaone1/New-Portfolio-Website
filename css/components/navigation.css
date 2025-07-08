@@ -197,3 +197,7 @@
     color: var(--color-text-primary);
   }
 }
+
+.force-repaint {
+  animation: none !important;
+}
