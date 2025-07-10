@@ -3,11 +3,12 @@ import { Navigation } from './navigation.js';
 import { Modal } from './components/modal.js';
 import { Alert } from './components/alert.js';
 import { Loading } from './components/loading.js';
+import { ProjectsManager } from './projects.js';
 import JustValidate from 'just-validate';
 
 // IMPORTANT: Core initialization - runs when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-  // THEME TOGGLE: Use icon in navbar
+  // THEME TOGGLE: Enhanced theme management with persistence
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = themeToggle?.querySelector('.theme-toggle__icon');
 
@@ -20,17 +21,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (themeToggle) {
+  // Initialize theme from localStorage or system preference
+  function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
     setThemeIcon();
+  }
+
+  // Initialize theme on page load
+  initializeTheme();
+
+  if (themeToggle) {
     themeToggle.addEventListener('click', () => {
       // Save menu open state
       const wasMenuOpen = window.app?.navigation?.isMenuOpen;
-      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+      
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
         document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
       } else {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
       }
+      
       setThemeIcon();
+      
       // Restore menu open state if it was open
       if (wasMenuOpen && window.app?.navigation?.mobileMenu && window.app?.navigation?.mobileMenuButton) {
         window.app.navigation.isMenuOpen = true;

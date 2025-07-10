@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Explore Sam's web development projects - from React applications to full-stack solutions">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sam">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Projects - Sam's Portfolio">
+    <meta property="og:description" content="Explore Sam's web development projects - from React applications to full-stack solutions">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/projects">
+    <meta property="og:image" content="/assets/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Projects - Sam's Portfolio">
+    <meta property="twitter:description" content="Explore Sam's web development projects - from React applications to full-stack solutions">
+
+    <title>Projects - Sam's Portfolio</title>
+
+    <!-- Resource Hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/main.css" as="style" />
+    <link rel="preload" href="js/main.js" as="script" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.json" />
+
+    <!-- External Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Sam's Web Development Projects",
+        "description": "A collection of web development projects showcasing React, Node.js, and modern web technologies",
+        "numberOfItems": 12,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "E-Commerce Platform",
+              "description": "Full-stack e-commerce solution built with React and Node.js"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="index.html" class="nav__logo" aria-label="Home">Sam</a>
+        <ul class="nav__list" data-mobile-menu>
+          <li><a href="index.html" class="nav__link" data-nav-link>Home</a></li>
+          <li><a href="about.html" class="nav__link" data-nav-link>About</a></li>
+          <li><a href="projects.html" class="nav__link" aria-current="page" data-nav-link>Projects</a></li>
+          <li><a href="index.html#contact" class="nav__link" data-nav-link>Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme" type="button">
+            <span class="theme-toggle__icon" aria-hidden="true"></span>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-mobile-menu-button
+          >
+            <span class="nav__toggle-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <!-- Projects Hero Section -->
+      <section class="projects-hero" aria-labelledby="projects-hero-title">
+        <div class="container">
+          <div class="projects-hero__content">
+            <h1 id="projects-hero-title" class="projects-hero__title">My Projects</h1>
+            <p class="projects-hero__subtitle">
+              Explore my latest web development projects, from React applications to full-stack solutions
+            </p>
+            <div class="projects-hero__stats">
+              <div class="stat">
+                <span class="stat__number">12</span>
+                <span class="stat__label">Projects</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">5</span>
+                <span class="stat__label">Technologies</span>
+              </div>
+              <div class="stat">
+                <span class="stat__number">100%</span>
+                <span class="stat__label">Success Rate</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Filter & Search -->
+      <section class="projects-filter" aria-labelledby="filter-title">
+        <div class="container">
+          <h2 id="filter-title" class="sr-only">Filter Projects</h2>
+          
+          <!-- Search Bar -->
+          <div class="search-container">
+            <div class="search-box">
+              <input 
+                type="text" 
+                id="project-search" 
+                class="search-input" 
+                placeholder="Search projects..."
+                aria-label="Search projects"
+              >
+              <button type="button" class="search-btn" aria-label="Search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"/>
+                  <path d="m21 21-4.35-4.35"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Filter Buttons -->
+          <div class="filter-container">
+            <div class="filter-group" role="group" aria-label="Project category filters">
+              <button type="button" class="filter-btn active" data-filter="*" aria-pressed="true">
+                All Projects
+              </button>
+              <button type="button" class="filter-btn" data-filter=".web" aria-pressed="false">
+                Web Apps
+              </button>
+              <button type="button" class="filter-btn" data-filter=".mobile" aria-pressed="false">
+                Mobile Apps
+              </button>
+              <button type="button" class="filter-btn" data-filter=".ecommerce" aria-pressed="false">
+                E-Commerce
+              </button>
+              <button type="button" class="filter-btn" data-filter=".api" aria-pressed="false">
+                APIs
+              </button>
+              <button type="button" class="filter-btn" data-filter=".ui" aria-pressed="false">
+                UI/UX
+              </button>
+            </div>
+
+            <div class="filter-group" role="group" aria-label="Technology filters">
+              <button type="button" class="filter-btn" data-filter=".react" aria-pressed="false">
+                React
+              </button>
+              <button type="button" class="filter-btn" data-filter=".node" aria-pressed="false">
+                Node.js
+              </button>
+              <button type="button" class="filter-btn" data-filter=".typescript" aria-pressed="false">
+                TypeScript
+              </button>
+              <button type="button" class="filter-btn" data-filter=".python" aria-pressed="false">
+                Python
+              </button>
+            </div>
+          </div>
+
+          <!-- Active Filters Display -->
+          <div class="active-filters" id="active-filters" aria-live="polite">
+            <!-- Active filters will be displayed here -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section class="projects-grid-section" aria-labelledby="projects-grid-title">
+        <div class="container">
+          <h2 id="projects-grid-title" class="sr-only">Projects Grid</h2>
+          
+          <div class="projects-grid" id="projects-grid">
+            <!-- Project Card 1 -->
+            <article class="project-card web react typescript" data-categories="web,react,typescript">
+              <div class="project-card__image">
+                <img src="assets/images/projects/ecommerce-platform.jpg" alt="E-Commerce Platform" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="ecommerce">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/ecommerce-platform" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">E-Commerce Platform</h3>
+                <p class="project-card__description">
+                  Full-stack e-commerce solution with React frontend, Node.js backend, and MongoDB database.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Node.js</span>
+                  <span class="project-card__tag">MongoDB</span>
+                  <span class="project-card__tag">Stripe</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2024</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 2 -->
+            <article class="project-card mobile react typescript" data-categories="mobile,react,typescript">
+              <div class="project-card__image">
+                <img src="assets/images/projects/task-manager.jpg" alt="Task Manager App" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="task-manager">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/task-manager" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Task Manager App</h3>
+                <p class="project-card__description">
+                  Mobile-first task management application with real-time synchronization and offline support.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React Native</span>
+                  <span class="project-card__tag">Firebase</span>
+                  <span class="project-card__tag">Redux</span>
+                  <span class="project-card__tag">PWA</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2024</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 3 -->
+            <article class="project-card api node python" data-categories="api,node,python">
+              <div class="project-card__image">
+                <img src="assets/images/projects/weather-api.jpg" alt="Weather API" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="weather-api">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/weather-api" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Weather API</h3>
+                <p class="project-card__description">
+                  RESTful API for weather data with caching, rate limiting, and comprehensive documentation.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Express.js</span>
+                  <span class="project-card__tag">Redis</span>
+                  <span class="project-card__tag">Swagger</span>
+                  <span class="project-card__tag">Docker</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2023</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 4 -->
+            <article class="project-card ui react" data-categories="ui,react">
+              <div class="project-card__image">
+                <img src="assets/images/projects/design-system.jpg" alt="Design System" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="design-system">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/design-system" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Design System</h3>
+                <p class="project-card__description">
+                  Comprehensive design system with React components, Storybook documentation, and accessibility features.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Storybook</span>
+                  <span class="project-card__tag">Styled Components</span>
+                  <span class="project-card__tag">Accessibility</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2023</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 5 -->
+            <article class="project-card ecommerce react node" data-categories="ecommerce,react,node">
+              <div class="project-card__image">
+                <img src="assets/images/projects/restaurant-ordering.jpg" alt="Restaurant Ordering System" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="restaurant-ordering">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/restaurant-ordering" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Restaurant Ordering System</h3>
+                <p class="project-card__description">
+                  Online food ordering platform with real-time order tracking and payment processing.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">React</span>
+                  <span class="project-card__tag">Socket.io</span>
+                  <span class="project-card__tag">Stripe</span>
+                  <span class="project-card__tag">PostgreSQL</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2023</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project Card 6 -->
+            <article class="project-card web python" data-categories="web,python">
+              <div class="project-card__image">
+                <img src="assets/images/projects/data-analytics.jpg" alt="Data Analytics Dashboard" class="lazy" loading="lazy">
+                <div class="project-card__overlay">
+                  <div class="project-card__actions">
+                    <button class="btn btn--primary project-card__view" data-project="data-analytics">
+                      View Details
+                    </button>
+                    <a href="https://github.com/yourusername/data-analytics" class="btn btn--outline" target="_blank" rel="noopener">
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card__content">
+                <h3 class="project-card__title">Data Analytics Dashboard</h3>
+                <p class="project-card__description">
+                  Interactive dashboard for data visualization with real-time charts and reporting features.
+                </p>
+                <div class="project-card__tags">
+                  <span class="project-card__tag">Python</span>
+                  <span class="project-card__tag">Django</span>
+                  <span class="project-card__tag">Chart.js</span>
+                  <span class="project-card__tag">Pandas</span>
+                </div>
+                <div class="project-card__meta">
+                  <span class="project-card__date">2023</span>
+                  <span class="project-card__status">Live</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Load More Button -->
+          <div class="load-more-container">
+            <button type="button" class="btn btn--outline load-more-btn" id="load-more-btn">
+              Load More Projects
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Statistics -->
+      <section class="project-stats" aria-labelledby="stats-title">
+        <div class="container">
+          <h2 id="stats-title" class="section__title">Project Statistics</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-card__icon">🚀</div>
+              <div class="stat-card__content">
+                <h3 class="stat-card__number">12</h3>
+                <p class="stat-card__label">Projects Completed</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">👥</div>
+              <div class="stat-card__content">
+                <h3 class="stat-card__number">8</h3>
+                <p class="stat-card__label">Happy Clients</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">⭐</div>
+              <div class="stat-card__content">
+                <h3 class="stat-card__number">150+</h3>
+                <p class="stat-card__label">GitHub Stars</p>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card__icon">🔧</div>
+              <div class="stat-card__content">
+                <h3 class="stat-card__number">10+</h3>
+                <p class="stat-card__label">Technologies</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__section">
+            <h3 class="footer__title">Sam</h3>
+            <p class="footer__description">
+              Web developer passionate about creating exceptional digital experiences.
+            </p>
+          </div>
+          <div class="footer__section">
+            <h4 class="footer__subtitle">Quick Links</h4>
+            <ul class="footer__links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer__section">
+            <h4 class="footer__subtitle">Connect</h4>
+            <div class="social-links">
+              <a href="https://github.com/yourusername" aria-label="GitHub" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+              </a>
+              <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a href="https://twitter.com/yourusername" aria-label="Twitter" class="social-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2024 Sam. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html> 

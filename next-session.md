@@ -1,3 +1,11 @@
+# NEXT SESSION PRIORITIES
+
+- [ ] Fix theme toggle button not appearing on GitHub Pages (check Vite base, asset/script loading, markup in dist/index.html)
+- [ ] Run and document Lighthouse audit results (performance, accessibility, best practices, SEO)
+- [ ] Ensure all critical features work in production build
+
+---
+
 # Next Session - Portfolio Website Progress
 
 ## 🎉 **Major Progress Made!**
