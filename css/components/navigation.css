@@ -201,3 +201,42 @@
 .force-repaint {
   animation: none !important;
 }
+
+/* --- Hamburger Icon Consistency Fix --- */
+.nav__toggle .nav__toggle-icon,
+.nav__toggle .nav__toggle-icon::before,
+.nav__toggle .nav__toggle-icon::after {
+  background: var(--color-text-primary) !important;
+  height: 2px !important;
+  width: 2.2rem !important;
+  border-radius: 2px !important;
+  display: block !important;
+  position: absolute !important;
+  left: 0 !important;
+  transition: background 0.2s, transform 0.2s, top 0.2s, bottom 0.2s !important;
+}
+.nav__toggle .nav__toggle-icon {
+  position: relative !important;
+  top: 0 !important;
+  margin: 0 auto !important;
+}
+.nav__toggle .nav__toggle-icon::before {
+  content: '';
+  top: -8px !important;
+}
+.nav__toggle .nav__toggle-icon::after {
+  content: '';
+  bottom: -8px !important;
+}
+.nav__toggle.active .nav__toggle-icon {
+  background: transparent !important;
+}
+.nav__toggle.active .nav__toggle-icon::before {
+  top: 0 !important;
+  transform: rotate(45deg) !important;
+}
+.nav__toggle.active .nav__toggle-icon::after {
+  bottom: 0 !important;
+  transform: rotate(-45deg) !important;
+}
+/* End Hamburger Icon Consistency Fix */
